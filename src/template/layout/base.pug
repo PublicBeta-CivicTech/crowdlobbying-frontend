@@ -1,0 +1,23 @@
+include ../config
+block config
+include ../mixins/mixins
+
+doctype
+html(lang= lang)
+  head
+    include ../partials/head
+
+  body(class= template)
+    //- Uncomment for active SVG Sprite
+      .u-visuallyHidden
+        include ../../assets/icons/symbol/icons.svg
+    .l-app
+      .l-app__head
+        include ../partials/header
+      main.l-app__body
+        section
+          block content
+      .l-app__footer
+        include ../partials/footer
+
+    script(src= path + "assets/app.js", async)

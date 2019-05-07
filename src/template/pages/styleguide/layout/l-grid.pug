@@ -1,0 +1,111 @@
+extends ../../../layout/styleguide
+
+append config
+  - var template = 't-styleguide'
+  - var title = "Grille"
+  - var metaDesc = "Grille - CSS / HTML"
+  - var path = './../../'
+
+block content
+  .hf-head
+    .hf-wrapper
+      h1 Grille
+  .hf-wrapper
+    .hf-content
+      h2 Grille
+      h3 Composant de base
+    :code
+      <div class="l-grid">
+        <div class="l-grid__item">1</div>
+        <div class="l-grid__item">2</div>
+      </div>
+    .hf-content
+      h3 Définition du nombre de colones
+      p Ajouter le modifier <code>.l-grid__item--X-XX</code> à l'élément ayant la classe <code>.l-grid__item</code> afin de modifier son nombre de colonnes.
+      p Le dernier nombre de la chaine de caractères (ex : -50) correspond à la largeur en pourcentage (50%).
+      p Modifiers disponibles&nbsp;:
+      .u-mtM
+        table
+          thead
+            tr
+              th Taille
+              th Valeurs
+          tbody
+            tr
+              td
+                b Taille s - de 480px à 768px
+              td
+                <code>s-20</code>
+                <code>s-25</code>
+                <code>s-33</code>
+                <code>s-40</code>
+                <code>s-50</code>
+                <code>s-60</code>
+                <code>s-66</code>
+                <code>s-75</code>
+            tr
+              td
+                b Taille s-up - sup à 480px
+              td
+                <code>s-up-20</code>
+                <code>s-up-25</code>
+                <code>s-up-33</code>
+                <code>s-up-40</code>
+                <code>s-up-50</code>
+                <code>s-up-60</code>
+                <code>s-up-66</code>
+                <code>s-up-75</code>
+                <code>s-up-80</code>
+            tr
+              td
+                b Taille m - de 768px à 1049px
+              td
+                <code>m-20</code>
+                <code>m-25</code>
+                <code>m-33</code>
+                <code>m-40</code>
+                <code>m-50</code>
+                <code>m-60</code>
+                <code>m-66</code>
+                <code>m-75</code>
+                <code>m-80</code>
+            tr
+              td
+                b Taille m-up - sup à 768px
+              td
+                <code>m-up-20</code>
+                <code>m-up-25</code>
+                <code>m-up-33</code>
+                <code>m-up-40</code>
+                <code>m-up-50</code>
+                <code>m-up-60</code>
+                <code>m-up-66</code>
+                <code>m-up-75</code>
+                <code>m-up-80</code>
+            tr
+              td
+                b Taille l-up - sup à 1049px
+              td
+                <code>l-up-20</code>
+                <code>l-up-25</code>
+                <code>l-up-33</code>
+                <code>l-up-40</code>
+                <code>l-up-50</code>
+                <code>l-up-60</code>
+                <code>l-up-66</code>
+                <code>l-up-75</code>
+                <code>l-up-80</code>
+    :code
+      <div class="l-grid">
+        <div class="l-grid__item l-grid__item--m-50 l-grid__item--l-up-25">1</div>
+        <div class="l-grid__item l-grid__item--m-50 l-grid__item--l-up-25">2</div>
+        <div class="l-grid__item l-grid__item--m-50 l-grid__item--l-up-25">3</div>
+        <div class="l-grid__item l-grid__item--m-50 l-grid__item--l-up-25">4</div>
+        <div class="l-grid__item l-grid__item--s-up-20">5</div>
+        <div class="l-grid__item l-grid__item--s-up-20">6</div>
+        <div class="l-grid__item l-grid__item--s-up-20">7</div>
+        <div class="l-grid__item l-grid__item--s-up-20">8</div>
+        <div class="l-grid__item l-grid__item--s-up-20">9</div>
+        <div class="l-grid__item l-grid__item--s-75 l-grid__item--m-up-50">10</div>
+        <div class="l-grid__item l-grid__item--s-25 l-grid__item--m-up-50">11</div>
+      </div>

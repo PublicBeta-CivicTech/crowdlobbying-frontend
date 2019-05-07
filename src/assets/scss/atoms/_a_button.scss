@@ -1,0 +1,70 @@
+/** ======================================
+ * Atom : Button
+ * ======================================= */
+
+.a-button {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  min-height: $button-base-height;
+  padding: 1.15rem 1.8rem;
+  font-size: $font-size-S;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  color: $clr-light;
+  border: 0;
+  border-radius: $rad-S;
+  background: $clr-1;
+  cursor: pointer;
+  user-select: none;
+  transition: $trans-all;
+  -webkit-user-drag: none;
+  -webkit-appearance: none;
+
+  &:hover {
+    color: $clr-light;
+    background: $clr-1-darker;
+  }
+}
+
+.a-button--active {
+  background: shade($clr-1, 40%);
+}
+
+.a-button--disabled,
+.a-button:disabled {
+  opacity: 0.5;
+  background-image: none !important;
+  box-shadow: none !important;
+  cursor: not-allowed;
+
+  &:hover {
+    background: $clr-1;
+  }
+}
+
+/**
+* Modifier : Size
+* --------------------------------------- */
+
+.a-button--small {
+  padding: 0.9rem 1.5rem;
+  font-size: $font-size-XS;
+  min-height: $button-S-height;
+}
+
+.a-button--full-width {
+  justify-content: center;
+  width: 100%;
+}
+
+.a-button--full-width-mobile {
+  @media #{$mobile} {
+    justify-content: center;
+    width: 100%;
+  }
+}

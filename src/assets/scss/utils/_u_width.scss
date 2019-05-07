@@ -1,0 +1,12 @@
+/** ======================================
+ * Utils / Width
+ * ======================================= */
+
+@each $width in $width-list {
+  $prefix: nth($width, 1);
+  $size: nth($width, 2);
+
+  .u-w#{$prefix} {
+    width: #{$size} !important;
+  }
+}
