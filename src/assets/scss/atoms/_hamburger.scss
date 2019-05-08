@@ -1,0 +1,27 @@
+@import 'node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+.hamburger-box {
+  width: 18px;
+  height: 16px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: $clr-white;
+  width: 18px;
+  height: 2px;
+  .hamburger.is-active & {
+    background-color: $clr-white;
+  }
+}
+
+.hamburger-inner {
+  margin-top: -1px;
+  &::before {
+    top: -7px;
+  }
+  &::after {
+    bottom: -7px;
+  }
+}

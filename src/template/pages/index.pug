@@ -1,14 +1,16 @@
 extends ../layout/summary
 
 append config
-  - var title = "Sommaire"
-  - var metaDesc = "My page description"
+  - var title = "Crowd Lobbying Frontend"
+  - var metaDesc = "Frontend templates for crowd-lobbying.ch"
 
 block content
   .hf-wrapper
     .hf-content
       h2 Pages
       ul
+        li
+          a(href="./campaign.html") Campaign Landing
         li
           a(href="./home.html") Accueil
       h2 Documentation

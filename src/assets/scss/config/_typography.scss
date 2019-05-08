@@ -1,0 +1,79 @@
+// Typographic definitions
+
+// Font family sets to be used with font-family
+// ie. font-family: $font-sans
+
+$font-sans: (
+  'Fira Sans',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Helvetica,
+  Arial,
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol'
+);
+
+$font-slab: (
+  'Roboto Slab',
+  Georgia,
+  Times,
+  Courier,
+  serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol'
+);
+
+$font-mono: (
+  'Fira Mono',
+  Courier,
+  monospace,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol'
+);
+
+// Font sizes
+// PRIVATE: Do not access directly, use mixin font-size for consistency
+// s. styles/utils/_font-size.scss
+$_font-size: (
+  'xs': 14px,
+  's': 16px,
+  'm': 20px,
+  'l': 21px,
+  'xl': 30px,
+  'xxl': 48px,
+);
+
+// Line heights
+// PRIVATE: Do not access directly, use mixin font-size for consistency
+// s. styles/utils/_font-size.scss
+$_line-heights: (
+  'xs': 18px,
+  's': 26px,
+  'm': 29px,
+  'l': 30px,
+  'xl': 36px,
+  'xxl': 36px,
+);
+
+// 'Fluid' font sizes are scaled down for the given responsive breakpoints
+// PRIVATE: Do not access directly, use mixin font-size for consistency
+$_fluid-type: (
+  'xl': (
+    'default': 'l',
+    'mouse': 'xl',
+  ),
+  'l': (
+    'default': 'm',
+    'mouse': 'l',
+  ),
+  'm': (
+    'default': 's',
+    'mouse': 'm',
+  ),
+);

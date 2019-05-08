@@ -1,0 +1,21 @@
+// Layout definitions
+
+// Layers, z-indexes
+
+// Grid configuration
+$grid: (
+  'layout-width': 940px,
+  'gutter-width': 20px,
+  'col-width': 60px,
+);
+
+// Grid offset (horizontal margin)
+$grid-offset: (
+  'default': 15px,
+  'mouse': 30px,
+  'rat': 40px,
+  'rabbit': 50px,
+);
+
+// Base for vertical spacing
+$vertical-space: 22px;

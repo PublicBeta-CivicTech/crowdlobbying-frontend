@@ -1,0 +1,43 @@
+// Outermost element: Full viewport width
+.viewport-width {
+  width: 100%;
+  &.grey {
+    background-color: $clr-grey;
+  }
+  &.grey-darker {
+    background-color: $clr-grey-darker;
+  }
+}
+
+// Page width: Full grid width (incl. outer margins)
+.page-width {
+  position: relative;
+  max-width: #{map-get($grid, 'layout-width') + map-get($grid-offset, 'rabbit') *
+    2};
+  margin: 0 auto;
+}
+
+// Layout width (excl. outer margins)
+.layout-width {
+  position: relative;
+}
+
+/* Responsive */
+
+@include mq($until: 'mouse') {
+  .layout-width {
+    margin: 0 map-get($grid-offset, 'default');
+  }
+}
+
+@each $item in $grid-offset {
+  $bp: nth($item, 1);
+  $offset: nth($item, 2);
+  @if ($bp != 'default') {
+    @include mq($from: $bp) {
+      .layout-width {
+        margin: 0 $offset;
+      }
+    }
+  }
+}

@@ -20,22 +20,19 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   position: relative;
   height: 100%;
-  font-family: $font-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  line-height: $line-height-M;
+  font-family: $font-sans;
+  font-size: map-get($_font-size, "s");
+  font-weight: normal;
+  line-height: 1;
   text-rendering: optimizeLegibility;
-  color: $clr-0-darker;
+  color: $clr-black;
   background: $clr-almost-white;
   overflow: hidden;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: $app-min-width;
 }
 
 [tabindex="-1"]:focus {
@@ -96,13 +93,13 @@ acronym {
 
 a {
   text-decoration: none;
-  color: $clr-1;
+  color: $clr-red-dark;
   transition: color $trans-timing $trans-cubic;
 
   &:active,
   &:hover,
   &:focus {
-    color: $clr-1-light;
+    color: $clr-purple;
   }
 }
 
@@ -210,7 +207,7 @@ fieldset {
 }
 
 ::placeholder {
-  color: $clr-0-light;
+  color: $clr-grey-lighter;
 }
 
 /**
@@ -240,6 +237,6 @@ th {
 
 hr {
   border: 0;
-  border-top: 1px solid $clr-0-dark;
+  border-top: 1px solid $clr-grey-dark;
   margin: 2rem 0;
 }

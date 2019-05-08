@@ -1,0 +1,15 @@
+extends ../layout/campaign
+
+append config
+  - var title = "Campaign Title"
+  - var metaDesc = "Campaign Description"
+  - var template = 't-campaign'
+
+block data
+  -
+    var data = {
+      foo: 'some foobar content for template test some foo bar baz'
+    }
+
+block content
+  p This is block 'content'

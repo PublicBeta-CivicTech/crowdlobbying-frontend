@@ -1,12 +1,10 @@
 header.header
+  +stripe()(layoutClass='header__inner')
+    h1.header__logotype
+      a.header__home-link(href='/')
+        +icon('logo-crowd-lobbying-quer', 'logotype')
+        span.visually-hidden Crowd-Lobbying
 
-  .l-wrapper
-
-    h1.header-logo
-      a.header-logo-link(href="./") App name
-
-    nav.menu
-      +menu([
-        { 'title':'Author', 'link': 'https://sutterlity.fr/' },
-        { 'title':'Repo Github', 'link': 'https://github.com/sutter/helloFront' }
-      ])
+    button.hamburger.hamburger--spin(type="button")
+      span.hamburger-box
+        span.hamburger-inner

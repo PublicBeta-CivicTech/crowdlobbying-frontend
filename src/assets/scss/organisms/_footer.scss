@@ -1,0 +1,18 @@
+.footer__about {
+  color: $clr-white;
+}
+
+.footer__privacy {
+  color: rgba($clr-white, 0.75);
+}
+
+// RichText
+
+.footer h2,
+.footer p {
+  @include font-size('s');
+}
+
+.footer h2 {
+  font-weight: bold;
+}

@@ -1,0 +1,24 @@
+include ../config
+block config
+include ../mixins/mixins
+block data
+
+doctype
+html(lang=lang)
+  head
+    include ../partials/head
+
+  body(class=template)
+
+    //- SVG sprite sheet
+    .visually-hidden
+      include ../../assets/icons/symbol/icons.svg
+
+    include ../partials/header
+
+    +stripe()
+      block content
+
+    include ../partials/footer
+
+    script(src= path + "assets/app.js", async)
