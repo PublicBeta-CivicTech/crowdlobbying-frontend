@@ -65,7 +65,6 @@ h5,
 h6 {
   margin: 0;
   font-size: inherit;
-  font-weight: inherit;
   line-height: inherit;
 }
 
@@ -93,7 +92,7 @@ acronym {
 a {
   text-decoration: none;
   color: $clr-red-dark;
-  transition: color $trans-timing $trans-cubic;
+  transition: color $trans-duration $trans-cubic;
 
   &:active,
   &:hover,

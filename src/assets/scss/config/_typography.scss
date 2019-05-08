@@ -43,9 +43,9 @@ $font-mono: (
 $_font-size: (
   'xs': 14px,
   's': 16px,
-  'm': 20px,
-  'l': 21px,
-  'xl': 30px,
+  'm': 18px,
+  'l': 20px,
+  'xl': 24px,
   'xxl': 48px,
 );
 
@@ -53,19 +53,23 @@ $_font-size: (
 // PRIVATE: Do not access directly, use mixin font-size for consistency
 // s. styles/utils/_font-size.scss
 $_line-heights: (
-  'xs': 18px,
+  'xs': 24px,
   's': 26px,
-  'm': 29px,
+  'm': 28px,
   'l': 30px,
-  'xl': 36px,
-  'xxl': 36px,
+  'xl': 34px,
+  'xxl': 58px,
 );
 
 // 'Fluid' font sizes are scaled down for the given responsive breakpoints
 // PRIVATE: Do not access directly, use mixin font-size for consistency
 $_fluid-type: (
+  'xxl': (
+    'default': 'xl',
+    'mouse': 'xxl',
+  ),
   'xl': (
-    'default': 'l',
+    'default': 'm',
     'mouse': 'xl',
   ),
   'l': (

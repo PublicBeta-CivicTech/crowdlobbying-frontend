@@ -1,0 +1,21 @@
+.action-button {
+  @include un-button();
+  @include font-size('s');
+  min-width: 200px;
+  font-weight: bold;
+  padding: 13px 0 12px;
+  color: $clr-white;
+  background-color: $clr-red-dark;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 2px 0 rgba($clr-black, 0.24),
+    0 0 2px 0 rgba($clr-black, 0.12);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s $trans-cubic, background-color 0.1s $trans-cubic,
+    box-shadow 0.1s $trans-cubic;
+  &:hover {
+    background-color: shade($clr-red-dark, 10);
+    box-shadow: 0 0 0 0 rgba($clr-black, 0.24), 0 0 1px 0 rgba($clr-black, 0.12);
+    transform: translateY(1px);
+  }
+}

@@ -1,0 +1,34 @@
+.hero {
+  background-image: url('/assets/hero/hero.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero__inner {
+  padding-top: 120px;
+  padding-bottom: 50px;
+  background-color: rgba($clr-black, 0.4);
+}
+
+.hero__layout {
+  color: $clr-white;
+  text-align: center;
+}
+
+// RichText
+
+.hero__layout {
+  h1 {
+    @include font-size('xxl');
+    margin-top: 21 / 24 * 1em;
+    margin-bottom: 14 / 24 * 1em;
+  }
+  h2,
+  p {
+    @include font-size('xl');
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 45 / 18 * 1em;
+  }
+}

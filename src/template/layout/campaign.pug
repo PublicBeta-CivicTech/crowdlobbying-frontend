@@ -16,6 +16,14 @@ html(lang=lang)
 
     include ../partials/header
 
+    section.hero
+      .hero__inner
+        +stripe()(layoutClass='hero__layout')
+          h2 #{hero.heading}
+          h1 #{hero.title}
+          p #{hero.footerLine}
+          button.action-button #{hero.callToAction}
+
     +stripe()
       block content
 
