@@ -1,0 +1,46 @@
+// Show grid (overlay)
+html.show-grid::before {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 50%;
+  right: 0;
+  height: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  width: 100%;
+  max-width: #{map-get($grid, 'layout-width') + map-get($grid-offset, 'rabbit') *
+    2};
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(cyan, 0.3) 0,
+    rgba(cyan, 0.3) grid-width($cols: 1),
+    transparent grid-width($cols: 1),
+    transparent grid-width($cols: 1, $gutters: 1)
+  );
+  border: none;
+
+  @include mq($until: 'mouse') {
+    background-position: map-get($grid-offset, 'default') 0;
+    background-size: calc(100% - #{map-get($grid-offset, 'default') * 2});
+  }
+
+  @include mq($from: 'mouse', $until: 'rat') {
+    background-position: map-get($grid-offset, 'mouse') 0;
+    background-size: calc(100% - #{map-get($grid-offset, 'mouse') * 2});
+  }
+
+  @include mq($from: 'rat', $until: 'rabbit') {
+    background-position: map-get($grid-offset, 'rat') 0;
+    background-size: calc(100% - #{map-get($grid-offset, 'rat') * 2});
+  }
+
+  @include mq($from: 'rabbit') {
+    background-position: map-get($grid-offset, 'rabbit') 0;
+    background-size: calc(100% - #{map-get($grid-offset, 'rabbit') * 2});
+  }
+}
