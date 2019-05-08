@@ -54,6 +54,14 @@ input {
 }
 
 /**
+ * Spacing
+ * --------------------------------------- */
+
+blockquote {
+  margin: 0;
+}
+
+/**
  * Typography
  * --------------------------------------- */
 
@@ -83,6 +91,15 @@ abbr[title] {
 abbr,
 acronym {
   cursor: help;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
 }
 
 /**

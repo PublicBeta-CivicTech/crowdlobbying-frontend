@@ -13,7 +13,6 @@ $clr-red: #d50000;
 $clr-red-dark: #b71c1c;
 
 // Card colors
-$clr-red-dark: #b71c1c;
 $clr-card-pink: #d71a60;
 $clr-card-purple: #8e24aa;
 $clr-card-purple-dark: #5e34b1;
@@ -24,6 +23,20 @@ $clr-card-teal: #01887b;
 $clr-card-green: #43a047;
 $clr-card-orange-dark: #e24b26;
 $clr-card-red: #e33935;
+
+// Workaround: Put all card colors in map to allow looping with @each
+$clr-cards: (
+  pink: $clr-card-pink,
+  purple: $clr-card-purple,
+  purple-dark: $clr-card-purple-dark,
+  blue-dark: $clr-card-blue-dark,
+  blue: $clr-card-blue,
+  cyan: $clr-card-cyan,
+  teal: $clr-card-teal,
+  green: $clr-card-green,
+  orange-dark: $clr-card-orange-dark,
+  red: $clr-card-red,
+);
 
 // Social color
 $clr-facebook: #3b5998;

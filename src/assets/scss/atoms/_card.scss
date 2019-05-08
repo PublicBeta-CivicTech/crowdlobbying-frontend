@@ -1,0 +1,39 @@
+.card {
+  display: block;
+  margin: 0 5px;
+  overflow: hidden;
+  padding: 8px 15px;
+  width: 280px;
+  min-width: 280px;
+  height: 250px;
+  color: $clr-white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: $clr-black;
+  @each $clr in $clr-cards {
+    $clr-name: nth($clr, 1);
+    $clr-value: nth($clr, 2);
+    &.#{$clr-name} {
+      background-color: $clr-value;
+    }
+  }
+}
+
+.card__meta {
+  // NOTE: font-size is not fluid
+  font-size: map-get($_font-size, 's');
+  line-height: map-get($_line-heights, 's');
+}
+
+.card__meta-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.card__quote {
+  font-family: $font-slab;
+  // NOTE: font-size is not fluid
+  font-size: map-get($_font-size, 'xl');
+  line-height: map-get($_line-heights, 'xl');
+}
+
+// Responsive

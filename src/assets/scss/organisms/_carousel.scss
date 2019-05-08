@@ -1,0 +1,40 @@
+.carousel {
+  background-color: $clr-grey-dark;
+}
+
+.carousel__cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.carousel__info {
+  overflow: hidden;
+  color: $clr-white;
+  padding-bottom: 18px;
+}
+
+// RichText
+
+.carousel__info {
+  p {
+    @include font-size('m');
+    text-align: center;
+    margin: 1em 0;
+  }
+  p.lead {
+    font-weight: bold;
+  }
+  a {
+    color: $clr-white;
+    text-decoration: underline;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $clr-blue-light;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 include ../config
 block config
+include ../mixins/all
 include ../mixins/mixins
 block data
 
@@ -24,6 +25,16 @@ html(lang=lang)
             h1 #{hero.title}
             p #{hero.footerLine}
             button.action-button #{hero.callToAction}
+
+    section.carousel
+      .carousel__cards
+        each item, index in carousel.cards
+          +card(item.sender, item.recipeientName, item.recipientParty, item.subject, item.quote, index)
+      +stripe()
+        .carousel__info
+          p.lead #{carousel.infoLead}
+          p #{carousel.infoText}
+          p: a(href='./campaign.html') Mehr erfahren
 
     +stripe()
       block content
