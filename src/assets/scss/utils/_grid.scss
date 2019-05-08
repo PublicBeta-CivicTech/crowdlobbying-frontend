@@ -12,37 +12,37 @@
 /// @param {int} $base-extra [0] - Accepts a px value to adjust base width (ie. if the base does not align with the globa grid).
 /// @param {enum} $scale ['rel'] - Use 'rel' to return a relative value (%) or 'abs' to return an absolute value (px).
 @function grid-width(
-    $cols: 0,
-    $gutters: 0,
-    $base-cols: 'all',
-    $base-gutters: 0,
-    $base-extra: 0,
-    $scale: 'rel'
+  $cols: 0,
+  $gutters: 0,
+  $base-cols: 'all',
+  $base-gutters: 0,
+  $base-extra: 0,
+  $scale: 'rel'
 ) {
-    $gutters: max(0, $cols - 1) + $gutters;
-    $width: $cols * map-get($nus-grid, 'col-width') + $gutters *
-        map-get($nus-grid, 'gutter-width');
-    @if ($scale == 'abs') {
-        @return $width;
-    }
-    $base: base-width(
-            $cols: $base-cols,
-            $gutters: $base-gutters,
-        ) + $base-extra;
-    @return $width / $base * 100%;
+  $gutters: max(0, $cols - 1) + $gutters;
+  $width: $cols * map-get($grid, 'col-width') + $gutters *
+    map-get($grid, 'gutter-width');
+  @if ($scale == 'abs') {
+    @return $width;
+  }
+  $base: base-width(
+      $cols: $base-cols,
+      $gutters: $base-gutters,
+    ) + $base-extra;
+  @return $width / $base * 100%;
 }
 
 // Helper function to calculate the absolute width of a given number of
 // columns and gutters.
 @function base-width($cols: 'all', $gutters: 0) {
-    $width: 0;
-    @if ($cols == 'all') {
-        $width: map-get($nus-grid, 'layout-width');
-    } @else {
-        $width: grid-width(
-            $cols: $cols,
-            $scale: 'abs',
-        );
-    }
-    @return $width + (grid-width($gutters: $gutters, $scale: 'abs'));
+  $width: 0;
+  @if ($cols == 'all') {
+    $width: map-get($grid, 'layout-width');
+  } @else {
+    $width: grid-width(
+      $cols: $cols,
+      $scale: 'abs',
+    );
+  }
+  @return $width + (grid-width($gutters: $gutters, $scale: 'abs'));
 }

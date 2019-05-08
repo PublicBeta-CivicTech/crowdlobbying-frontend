@@ -10,14 +10,13 @@
   background-color: rgba($clr-black, 0.4);
 }
 
-.hero__layout {
+.hero__content {
   color: $clr-white;
   text-align: center;
 }
 
 // RichText
-
-.hero__layout {
+.hero__content {
   h1 {
     @include font-size('xxl');
     margin-top: 21 / 24 * 1em;
@@ -30,5 +29,26 @@
   }
   p {
     margin-bottom: 45 / 18 * 1em;
+  }
+}
+
+// Responsive
+
+@include mq($from: 'rat') {
+  .hero__content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include mq($from: 'rat', $until: 'rabbit') {
+  .hero__content {
+    width: grid-width($cols: 10);
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .hero__content {
+    width: grid-width($cols: 8);
   }
 }
