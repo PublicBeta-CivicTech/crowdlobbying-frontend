@@ -28,7 +28,8 @@ html(lang=lang)
     section.carousel
       .carousel__cards
         each item, index in carousel.cards
-          +card(item.sender, item.recipeientName, item.recipientParty, item.subject, item.quote, index)
+          .carousel__slide
+            +card(item.sender, item.recipeientName, item.recipientParty, item.subject, item.quote, index)
       +stripe()
         .carousel__info
           p.lead #{carousel.infoLead}
@@ -40,4 +41,4 @@ html(lang=lang)
 
     include ../partials/footer
 
-    script(src= path + "assets/app.js", async)
+    script(src=path + 'assets/app.js', async)
