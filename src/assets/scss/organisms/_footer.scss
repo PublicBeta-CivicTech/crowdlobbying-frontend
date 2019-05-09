@@ -10,7 +10,7 @@
 
 .footer h2,
 .footer p {
-  @include font-size('s');
+  @include fluid-type('s');
 }
 
 .footer h2 {

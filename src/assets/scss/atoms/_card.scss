@@ -20,8 +20,8 @@
 
 .card__meta {
   // NOTE: font-size is not fluid
-  font-size: map-get($_font-size, 's');
-  line-height: map-get($_line-heights, 's');
+  font-size: map-get($font-size, 's');
+  line-height: map-get($line-heights, 's');
 }
 
 .card__meta-line {
@@ -32,8 +32,8 @@
 .card__quote {
   font-family: $font-slab;
   // NOTE: font-size is not fluid
-  font-size: map-get($_font-size, 'xl');
-  line-height: map-get($_line-heights, 'xl');
+  font-size: map-get($font-size, 'xl');
+  line-height: map-get($line-heights, 'xl');
 }
 
 // Responsive
