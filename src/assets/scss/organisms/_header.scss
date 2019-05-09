@@ -1,23 +1,63 @@
 .header {
-  display: flex;
-  background-color: rgba($clr-black, 0.5);
-}
-
-.header__inner {
+  position: fixed;
+  z-index: $layer-header;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px map-get($grid-offset, 'default');
+  transition: padding $trans-duration $trans-cubic;
+  &.has-bg {
+    background-color: rgba($clr-black, 0.5);
+  }
 }
 
 .header__logotype {
   width: 75px;
   height: 34px;
   margin-bottom: 6px;
+  transition: width $trans-duration $trans-cubic, height $trans-duration,
+    $trans-cubic;
 }
 
 .header__home-link {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+// Responsive
+
+// Header: Horizontal spacing
+@each $item in $grid-offset {
+  $bp: nth($item, 1);
+  $offset: nth($item, 2);
+  @if ($bp != 'default') {
+    @include mq($from: $bp) {
+      .header {
+        padding-left: $offset;
+        padding-right: $offset;
+      }
+    }
+  }
+}
+
+@include mq($from: 'rat') {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .header__logotype {
+    width: 100px;
+    height: 45px;
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .header__logotype {
+    width: 133px;
+    height: 60px;
+  }
 }

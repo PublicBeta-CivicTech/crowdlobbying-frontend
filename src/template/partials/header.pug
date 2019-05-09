@@ -1,10 +1,8 @@
 header.header
-  +stripe()(layoutClass='header__inner')
     h1.header__logotype
       a.header__home-link(href='/')
         +icon('logo-crowd-lobbying-quer', 'logotype')
         span.visually-hidden Crowd-Lobbying
-
     button.hamburger.hamburger--spin(type="button" onclick="app.menu.toggle()")
       span.hamburger-box
         span.hamburger-inner
