@@ -3,7 +3,7 @@ mixin card(sender, recipientName, recipientParty, subject, quote, index)
   blockquote.card(class=colors[index % colors.length])
     header.card__header
       cite.card__meta
-        span.card__meta-line An: #{recipientName} #{recipientParty}
+        span.card__meta-line An: #[strong #{recipientName}] #{recipientParty}
         span.card__meta-line Von: #{sender}
         span.card__meta-line Betreff: #{subject}
     p.card__quote #{quote}
