@@ -2,15 +2,28 @@
 
 Frontend for of crowd-lobbying.ch. Based on Hello Front Boilerplate (docs see below). 
 
+
 ## Installation
 
 s. «Hello Front»-Docs below 
 
-## Cards
+
+## Styling
+
+### Grid
+
+Die class `.show-grid` am `html`-Element zeigt das Layout-Grid.
+
+```html
+<html class="show-grid">
+```
+
+
+## Components
+
+### Cards
 
 «Cards» sind die bunten Karten mit den Messages wie sie z.B. im Slicer/Carousel auf der Campaign-Landing-Page zu sehen sind. 
-
-### Styling
 
 Die Hintergrundfarbe lässt sich via `class`-Attribute ansteuern. 
 
@@ -26,7 +39,10 @@ Im Moment werden folgende Farben unterstützt: `pink, purple, purple-dark, blue-
 
 Wie im Backend-Prototyp habe ich im Frontend das [Slick-Carousel](https://kenwheeler.github.io/slick/) verbaut. 
 
-## jQuery
+
+## Libraries
+
+### jQuery
 
 Das [Slick-Carousel](https://kenwheeler.github.io/slick/) hat [jQuery](https://jquery.com/) als Dependency. Davon abgesehen verzichte ich auf jQuery (weniger Dependencies, einfachere Migration). 
 
