@@ -23,7 +23,7 @@
   margin-bottom: 7px;
   // NOTE: static font-size, not fluid
   font-size: map-get($font-size, 's');
-  line-height: map-get($line-heights, 's');
+  line-height: map-get($line-height, 's');
 }
 
 .card__meta-line {

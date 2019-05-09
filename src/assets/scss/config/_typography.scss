@@ -57,11 +57,11 @@ $font-size--slab-m: 24px;
 $font-size--mono-s: 14px;
 
 // Line heights
-// Fluid type (and thus $line-heights) is used for font-family:sans only
+// Fluid type (and thus $line-height) is used for font-family:sans only
 // s. styles/utils/_fluid-type.scss
 
 // sans-serif
-$line-heights: (
+$line-height: (
   's': 24px,
   's-desktop': 28px,
   'm': 21px,

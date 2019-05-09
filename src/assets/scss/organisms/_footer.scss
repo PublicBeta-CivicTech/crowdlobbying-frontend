@@ -11,7 +11,7 @@
 .footer h2,
 .footer p {
   font-size: map-get($font-size, 's');
-  line-height: map-get($line-heights, 's');
+  line-height: map-get($line-height, 's');
 }
 
 .footer h2 {

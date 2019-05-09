@@ -24,6 +24,6 @@
 @mixin _set-font-size($size: 'm', $set-line-height: true) {
   font-size: map-get($font-size, $size);
   @if ($set-line-height) {
-    line-height: map-get($line-heights, $size);
+    line-height: map-get($line-height, $size);
   }
 }
