@@ -27,9 +27,16 @@ html(lang=lang)
 
     section.carousel
       .carousel__cards
-        each item, index in carousel.cards
+        each card, index in carousel.cards
           .carousel__slide
-            +card(item.sender, item.recipientName, item.recipientParty, item.subject, item.quote, index)
+            +card(
+              card.sender, 
+              card.recipientName, 
+              card.recipientParty, 
+              card.subject, 
+              card.quote, 
+              index
+            )
       +stripe()
         .carousel__info
           p.lead #{carousel.infoLead}
