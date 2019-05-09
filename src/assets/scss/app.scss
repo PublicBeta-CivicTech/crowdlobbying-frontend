@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
+// Slick carousel: Set defaults and import
+$slick-font-path: '/assets/slick/' !default;
+$slick-loader-path: '/assets/slick/' !default;
 @import 'node_modules/slick-carousel/slick/slick.scss';
 @import 'node_modules/slick-carousel/slick/slick-theme.scss';
 
