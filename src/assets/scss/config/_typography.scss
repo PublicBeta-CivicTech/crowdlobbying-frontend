@@ -38,44 +38,56 @@ $font-mono: (
 );
 
 // Font sizes
+// Fluid type (and thus $font-size) is used for font-family:sans only
 // s. styles/utils/_fluid-type.scss
+
+// sans-serif
 $font-size: (
-  'xs': 14px,
   's': 16px,
-  'm': 18px,
+  's-desktop': 18px,
+  'm': 17px,
   'l': 20px,
   'xl': 24px,
-  'xxl': 48px,
+  'xl-desktop': 48px,
 );
+// slab-serif
+$font-size--slab-s: 21px;
+$font-size--slab-m: 24px;
+// monospaced
+$font-size--mono-s: 14px;
 
 // Line heights
+// Fluid type (and thus $line-heights) is used for font-family:sans only
 // s. styles/utils/_fluid-type.scss
+
+// sans-serif
 $line-heights: (
-  'xs': 24px,
-  's': 26px,
-  'm': 28px,
-  'l': 30px,
-  'xl': 34px,
-  'xxl': 58px,
+  's': 24px,
+  's-desktop': 28px,
+  'm': 21px,
+  'l': 25px,
+  'xl': 30px,
+  'xl-desktop': 58px,
 );
+// slab-serif
+$line-height--slab-s: 27px;
+$line-height--slab-m: 30px;
+// monospaced
+$line-height--mono-s: 26px;
 
 // 'Fluid' font sizes are scaled down for the given responsive breakpoints
 // s. styles/utils/_fluid-type.scss
 $fluid-type: (
-  'xxl': (
-    'default': 'xl',
-    'mouse': 'xxl',
-  ),
-  'xl': (
-    'default': 'm',
-    'mouse': 'xl',
-  ),
-  'l': (
-    'default': 'm',
-    'mouse': 'l',
+  's': (
+    'default': 's',
+    'rat': 's-desktop',
   ),
   'm': (
-    'default': 's',
-    'mouse': 'm',
+    'default': 'm',
+    'rat': 'xl',
+  ),
+  'xl': (
+    'default': 'xl',
+    'rat': 'xl-desktop',
   ),
 );

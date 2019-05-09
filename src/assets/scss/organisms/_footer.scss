@@ -10,7 +10,8 @@
 
 .footer h2,
 .footer p {
-  @include fluid-type('s');
+  font-size: map-get($font-size, 's');
+  line-height: map-get($line-heights, 's');
 }
 
 .footer h2 {

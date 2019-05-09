@@ -18,13 +18,13 @@
 // RichText
 .hero__content {
   h1 {
-    @include fluid-type('xxl');
+    @include fluid-type('xl');
     margin-top: 21 / 24 * 1em;
     margin-bottom: 14 / 24 * 1em;
   }
   h2,
   p {
-    @include fluid-type('xl');
+    @include fluid-type('m');
     font-weight: bold;
   }
   p {
@@ -34,14 +34,14 @@
 
 // Responsive
 
-@include mq($from: 'rat') {
+@include mq($from: 'mouse') {
   .hero__content {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-@include mq($from: 'rat', $until: 'rabbit') {
+@include mq($from: 'mouse', $until: 'rabbit') {
   .hero__content {
     width: grid-width($cols: 10);
   }
