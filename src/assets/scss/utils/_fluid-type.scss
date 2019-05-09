@@ -1,9 +1,9 @@
 /// Mixin to ensure font sizes and line heights are used consistently.
 /// @param {enum} $size ['m'] - The key for the requested font size
 /// @param {bool} $set-line-height [true] - Set false to exclude 'line-height'
-@mixin font-size($size: 'm', $set-line-height: true) {
-  @if map-has-key($_fluid-type, $size) {
-    $bps: map-get($_fluid-type, $size);
+@mixin fluid-type($size: 'm', $set-line-height: true) {
+  @if map-has-key($fluid-type, $size) {
+    $bps: map-get($fluid-type, $size);
     @each $bp in $bps {
       $bp-name: nth($bp, 1);
       $bp-size: nth($bp, 2);
@@ -22,8 +22,8 @@
 
 // Helper for mixin font-size
 @mixin _set-font-size($size: 'm', $set-line-height: true) {
-  font-size: map-get($_font-size, $size);
+  font-size: map-get($font-size, $size);
   @if ($set-line-height) {
-    line-height: map-get($_line-heights, $size);
+    line-height: map-get($line-heights, $size);
   }
 }

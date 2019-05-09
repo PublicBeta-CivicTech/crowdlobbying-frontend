@@ -23,7 +23,7 @@ body {
   position: relative;
   height: 100%;
   font-family: $font-sans;
-  font-size: map-get($_font-size, 's');
+  font-size: map-get($font-size, 's');
   font-weight: normal;
   line-height: 1;
   text-rendering: optimizeLegibility;

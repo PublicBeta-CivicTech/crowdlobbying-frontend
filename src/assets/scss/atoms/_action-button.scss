@@ -1,6 +1,6 @@
 .action-button {
   @include un-button();
-  @include font-size('s');
+  @include fluid-type('s');
   min-width: 200px;
   font-weight: bold;
   padding: 13px 0 12px;

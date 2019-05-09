@@ -18,13 +18,13 @@
 // RichText
 .hero__content {
   h1 {
-    @include font-size('xxl');
+    @include fluid-type('xxl');
     margin-top: 21 / 24 * 1em;
     margin-bottom: 14 / 24 * 1em;
   }
   h2,
   p {
-    @include font-size('xl');
+    @include fluid-type('xl');
     font-weight: bold;
   }
   p {
