@@ -9,6 +9,11 @@
   overflow: hidden;
   padding-top: 26px;
   padding-bottom: 26px;
+  opacity: 0;
+  transition: opacity $trans-duration $trans-cubic;
+  &.is-ready {
+    opacity: 1;
+  }
 }
 
 .carousel__info {

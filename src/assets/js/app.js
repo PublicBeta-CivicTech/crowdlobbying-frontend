@@ -12,10 +12,12 @@ window.app = {
 // Doc ready handler
 $(document).ready(() => {
   // Init slick carousel
-  $('.carousel__cards').slick({
-    autoplay: true,
-    autoplaySpeed: 1500,
-    variableWidth: true,
-    centerMode: true,
-  })
+  $('.carousel__cards')
+    .slick({
+      autoplay: true,
+      autoplaySpeed: 1500,
+      variableWidth: true,
+      centerMode: true,
+    })
+    .addClass('is-ready')
 })
