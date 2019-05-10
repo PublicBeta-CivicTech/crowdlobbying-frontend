@@ -15,15 +15,7 @@ html(lang=lang)
       include ../../assets/icons/symbol/icons.svg
 
     include ../partials/header
-
-    section.hero
-      .hero__inner
-        +stripe()
-          .hero__content
-            h2 #{hero.heading}
-            h1 #{hero.title}
-            p #{hero.footerLine}
-            button.action-button #{hero.callToAction}
+    include ../partials/hero
 
     section.carousel
       .carousel__cards
