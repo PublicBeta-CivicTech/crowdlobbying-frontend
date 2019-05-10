@@ -1,4 +1,12 @@
-.officials {
+.officials__canton-chooser {
+  text-align: center;
+}
+
+.officials__select {
+  width: 100%;
+}
+
+.officials__list {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 5px;
@@ -40,6 +48,10 @@
 }
 
 @include mq($from: 'rat') {
+  .officials__select {
+    width: grid-width($cols: 4);
+  }
+
   .officials__card {
     width: grid-width($cols: 4);
     margin-right: grid-width($gutters: 1);

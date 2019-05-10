@@ -19,6 +19,7 @@
     "browser-sync": "^2.24.7"
   },
   "dependencies": {
+    "@material/select": "^2.0.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",

@@ -20,16 +20,7 @@ html(lang=lang)
     include ../partials/campaign-info
 
     section.act
-      +stripe()
-        .officials
-          each official in act.officials
-            +official(
-              official.name, 
-              official.party, 
-              official.state, 
-              official.count, 
-              official.image
-            )(class='officials__card')
+      include ../partials/officials
 
     +stripe()
       block content
