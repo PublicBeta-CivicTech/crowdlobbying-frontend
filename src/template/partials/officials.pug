@@ -1,5 +1,5 @@
-+stripe()
-  .officials
+section.officials
+  +stripe()
     .officials__canton-chooser
       .mdc-select.officials__select
         i.mdc-select__dropdown-icon
@@ -33,13 +33,13 @@
           option(value='1') Zürich
         label.mdc-floating-label Kanton wählen
         .mdc-line-ripple
-  .officials__list
-    each official in act.officials
-      +official(
-        official.name,
-        official.party,
-        official.state,
-        official.count,
-        official.image
-      )(class='officials__card')
+    .officials__list
+      each official in act.officials
+        +official(
+          official.name,
+          official.party,
+          official.state,
+          official.count,
+          official.image
+        )(class='officials__card')
 
