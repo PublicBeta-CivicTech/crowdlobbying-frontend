@@ -1,0 +1,50 @@
+.officials {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.officials__card {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+// Responsive
+
+@include mq($until: 'mouse') {
+  .officials__card {
+    width: 100%;
+  }
+}
+
+@include mq($from: 'mouse') {
+  .officials {
+    padding-bottom: grid-width($gutters: 1) / 2;
+    padding-top: grid-width($gutters: 1) / 2;
+  }
+
+  .officials__card {
+    margin-bottom: grid-width($gutters: 1) / 2;
+    margin-top: grid-width($gutters: 1) / 2;
+  }
+}
+
+@include mq($from: 'mouse', $until: 'rat') {
+  .officials__card {
+    width: grid-width($cols: 6);
+    &:nth-child(2n + 1) {
+      margin-right: grid-width($gutters: 1);
+    }
+  }
+}
+
+@include mq($from: 'rat') {
+  .officials__card {
+    width: grid-width($cols: 4);
+    margin-right: grid-width($gutters: 1);
+    &:nth-child(3n + 0) {
+      margin-right: 0;
+    }
+  }
+}

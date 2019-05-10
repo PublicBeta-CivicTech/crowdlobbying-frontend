@@ -1,0 +1,40 @@
+.official {
+  background-color: $clr-grey-lighter;
+  box-shadow: 0 2px 4px 0 rgba($clr-black, 0.25),
+    0 2px 4px 0 rgba($clr-black, 0.2);
+}
+
+.official__portrait {
+  position: relative;
+  padding-bottom: 217 / 300 * 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.official__footer {
+  padding: 10px 15px;
+}
+
+.official__badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.official__name,
+.official__state {
+  display: block;
+  white-space: nowrap;
+  // Static font-size, no fluid-type
+  font-size: map-get($font-size, 's');
+  line-height: map-get($line-height, 's');
+}
+
+.official__state {
+  @include state-badge();
+}
+
+.official__button {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}

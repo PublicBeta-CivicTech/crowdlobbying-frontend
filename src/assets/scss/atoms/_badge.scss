@@ -1,0 +1,13 @@
+.badge {
+  display: inline-block;
+  padding: 7px 10px 5px;
+  font-size: map-get($font-size, 'xs');
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 13px;
+  color: $clr-white;
+  background-color: $clr-red-dark;
+}

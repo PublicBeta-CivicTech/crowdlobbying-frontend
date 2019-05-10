@@ -42,6 +42,18 @@ html(lang=lang)
           p.lead #{carousel.infoLead}
           p #{carousel.infoText}
           p: a(href='./campaign.html') Mehr erfahren
+      
+    section.act
+      +stripe()
+        .officials
+          each official in act.officials
+            +official(
+              official.name, 
+              official.party, 
+              official.state, 
+              official.count, 
+              official.image
+            )(class='officials__card')
 
     +stripe()
       block content

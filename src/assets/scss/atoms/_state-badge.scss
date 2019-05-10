@@ -1,0 +1,24 @@
+@mixin state-badge($state: 'unknown') {
+  &::after {
+    content: '';
+    display: inline-block;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    margin: -6px 5px;
+    background-color: $clr-state-orange;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 36% auto;
+    background-image: url('/assets/state/state-unknown.svg');
+  }
+  &.with-us::after {
+    background-color: $clr-state-green;
+    background-image: url('/assets/state/state-yes.svg');
+  }
+  &.against-us::after {
+    background-color: $clr-state-red;
+    background-image: url('/assets/state/state-no.svg');
+  }
+}

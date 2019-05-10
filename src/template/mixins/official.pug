@@ -1,0 +1,15 @@
+//- @param state: -1: against us, 0: unknown, 1: with us
+//- @param count: the string displayed in the badge
+mixin official(name, party, state, count, image)
+  section.official(class!=attributes.class)
+    div.official__portrait(style='background-image: url("' + image.url + '")')
+      div.badge.official__badge #{count}
+    div.official__footer
+      span.official__name #[strong #{name}] #{party}
+      if state < 0
+        span.official__state.against-us Stimmabsicht
+      else if state > 0
+        span.official__state.with-us Stimmabsicht
+      else 
+        span.official__state.unknown Stimmabsicht
+      button.action-button.official__button(class=state > 0 ? 'visually-hidden' : '') Lobbyieren
