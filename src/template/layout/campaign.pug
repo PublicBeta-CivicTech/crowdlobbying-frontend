@@ -21,6 +21,11 @@ html(lang=lang)
     include ../partials/how-it-works
     include ../partials/officials
 
+    section.faq
+      +stripe()
+        .faq__richtext
+          block faq
+
     +stripe()
       block content
 

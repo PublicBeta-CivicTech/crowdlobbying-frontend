@@ -1,0 +1,34 @@
+.faq__richtext {
+  h1 {
+    font-size: map-get($font-size, 'xl');
+    line-height: map-get($line-height, 'xl');
+    margin: $vertical-space * 1.5 0 $vertical-space / 2;
+  }
+
+  h2 {
+    font-size: map-get($font-size, 'l');
+    line-height: map-get($line-height, 'l');
+    margin: $vertical-space * 1.5 0 $vertical-space / 2;
+  }
+
+  p {
+    @include fluid-type('s');
+    margin: $vertical-space / 2 0;
+  }
+}
+
+// Responsive
+
+@include mq($from: 'rat') {
+  .faq__richtext {
+    margin-left: auto;
+    margin-right: auto;
+    width: grid-width($cols: 10);
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .faq__richtext {
+    width: grid-width($cols: 8);
+  }
+}
