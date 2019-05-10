@@ -1,0 +1,15 @@
+// Responsive
+
+@include mq($from: 'rat') {
+  .donorbox__inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: grid-width($cols: 10);
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .donorbox__inner {
+    width: grid-width($cols: 8);
+  }
+}
