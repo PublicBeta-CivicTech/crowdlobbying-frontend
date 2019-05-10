@@ -1,7 +1,7 @@
 section.officials
   +stripe()
     .officials__canton-chooser
-      .mdc-select.officials__select
+      .mdc-select.mdc-select--outlined.officials__select
         i.mdc-select__dropdown-icon
         select.mdc-select__native-control
           option(value, disabled, selected)
@@ -31,8 +31,11 @@ section.officials
           option(value='23') Wallis
           option(value='9') Zug
           option(value='1') Zürich
-        label.mdc-floating-label Kanton wählen
-        .mdc-line-ripple
+        .mdc-notched-outline
+          .mdc-notched-outline__leading
+          .mdc-notched-outline__notch
+            label.mdc-floating-label Kanton wählen
+          .mdc-notched-outline__trailing
     .officials__list
       each official in act.officials
         +official(
@@ -42,4 +45,3 @@ section.officials
           official.count,
           official.image
         )(class='officials__card')
-
