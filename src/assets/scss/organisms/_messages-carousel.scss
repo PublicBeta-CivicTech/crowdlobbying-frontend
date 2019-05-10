@@ -1,0 +1,17 @@
+.messages-carousel {
+  background-color: $clr-grey-dark;
+}
+
+.messages-carousel__cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  opacity: 0;
+  transition: opacity $trans-duration $trans-cubic;
+  &.is-ready {
+    opacity: 1;
+  }
+}

@@ -16,25 +16,9 @@ html(lang=lang)
 
     include ../partials/header
     include ../partials/hero
+    include ../partials/messages-carousel
+    include ../partials/campaign-info
 
-    section.carousel
-      .carousel__cards
-        each card, index in carousel.cards
-          .carousel__slide
-            +card(
-              card.sender, 
-              card.recipientName, 
-              card.recipientParty, 
-              card.subject, 
-              card.quote, 
-              index
-            )
-      +stripe()
-        .carousel__info
-          p.lead #{carousel.infoLead}
-          p #{carousel.infoText}
-          p: a(href='./campaign.html') Mehr erfahren
-      
     section.act
       +stripe()
         .officials

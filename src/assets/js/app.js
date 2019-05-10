@@ -12,7 +12,7 @@ window.app = {
 // Doc ready handler
 $(document).ready(() => {
   // Init slick carousel
-  $('.carousel__cards')
+  $('.messages-carousel__cards')
     .slick({
       autoplay: true,
       autoplaySpeed: 1500,

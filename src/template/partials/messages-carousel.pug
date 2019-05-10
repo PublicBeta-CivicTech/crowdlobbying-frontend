@@ -1,0 +1,12 @@
+section.messages-carousel
+  .messages-carousel__cards
+    each message, index in messages
+      .messages-carousel__slide
+        +card(
+          message.sender, 
+          message.recipientName, 
+          message.recipientParty, 
+          message.subject, 
+          message.quote, 
+          index
+        )

@@ -1,22 +1,8 @@
-.carousel {
+.campaign-info {
   background-color: $clr-grey-dark;
 }
 
-.carousel__cards {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  overflow: hidden;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  opacity: 0;
-  transition: opacity $trans-duration $trans-cubic;
-  &.is-ready {
-    opacity: 1;
-  }
-}
-
-.carousel__info {
+.campaign-info__content {
   overflow: hidden;
   color: $clr-white;
   padding-bottom: 18px;
@@ -24,7 +10,7 @@
 
 // RichText
 
-.carousel__info {
+.campaign-info__content {
   p {
     @include fluid-type('s');
     text-align: center;
