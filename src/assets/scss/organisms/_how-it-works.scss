@@ -16,16 +16,12 @@
   position: relative;
   @include fluid-type('s');
   font-weight: bold;
-  padding-left: 35px;
   margin: 12px 0;
 }
 
 .how-it-works__ordinal {
   position: absolute;
-  top: 50%;
   left: 0;
-  width: 30px;
-  transform: translateY(-50%);
   font-size: 30px;
   line-height: 1;
   font-family: $font-slab;
@@ -34,4 +30,37 @@
 .how-it-works p {
   @include fluid-type('s');
   text-align: center;
+}
+
+// Responsive
+
+@include mq($until: 'rat') {
+  .how-it-works__step {
+    padding-left: 35px;
+  }
+
+  .how-it-works__ordinal {
+    width: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@include mq($from: 'rat') {
+  .how-it-works__steps {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .how-it-works__step {
+    width: grid-width($cols: 4);
+    text-align: center;
+    padding-top: 35px;
+  }
+
+  .how-it-works__ordinal {
+    top: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
