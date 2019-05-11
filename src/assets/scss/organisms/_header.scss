@@ -8,8 +8,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px map-get($grid-offset, 'default');
-  transition: padding $trans-duration $trans-cubic;
-  &.has-bg {
+  transition: padding $trans-duration $trans-cubic,
+    background-color 0.15s linear;
+  &.use-background {
     background-color: rgba($clr-black, 0.5);
   }
 }
