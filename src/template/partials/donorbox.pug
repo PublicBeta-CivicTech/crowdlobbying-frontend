@@ -1,5 +1,19 @@
 section.donorbox
   +stripe()
-    .donorbox__inner
+    .richtext.readable-width
+      h1 Spenden
+      p Mit Ihrer Spende bringen wir diese Kampagne weiter.
+      h2 Bankverbindung
+      p
+        | Verein PublicBeta
+        br
+        | Crowd-Lobbying
+        br
+        | 4051 Basel
+        br
+        | IBAN CH58 0900 0000 1509 7572 2
+        br
+        | Post-Konto 15-97572-2
+    .donorbox__inner.readable-width
       script(src='https://donorbox.org/widget.js', paypalexpress='false')
       iframe(src='https://donorbox.org/embed/crowdlobbying-digitaler-pass', height='685px', width='100%', style='max-width:500px; min-width:310px; max-height:none!important', seamless, name='donorbox', frameborder='0', scrolling='no', allowpaymentrequest)
