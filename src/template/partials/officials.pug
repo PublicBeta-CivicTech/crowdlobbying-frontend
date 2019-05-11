@@ -5,32 +5,8 @@ section.officials
         i.mdc-select__dropdown-icon
         select.mdc-select__native-control
           option(value, disabled, selected)
-          option(value='19') Aargau
-          option(value='15') Appenzell Ausserrhoden
-          option(value='16') Appenzell Innerhoden
-          option(value='13') Basel-Landschaft
-          option(value='12') Basel-Stadt
-          option(value='2') Bern
-          option(value='10') Freiburg
-          option(value='25') Genf
-          option(value='8') Glarus
-          option(value='18') Graubünden
-          option(value='26') Jura
-          option(value='3') Luzern
-          option(value='24') Neuenburg
-          option(value='7') Nidwalden
-          option(value='6') Obwalden
-          option(value='14') Schaffhausen
-          option(value='5') Schwyz
-          option(value='11') Solothurn
-          option(value='17') St. Gallen
-          option(value='21') Tessin
-          option(value='20') Thurgau
-          option(value='4') Uri
-          option(value='22') Waadt
-          option(value='23') Wallis
-          option(value='9') Zug
-          option(value='1') Zürich
+          each canton in cantons
+            option(value=canton.key) #{canton.name}
         .mdc-notched-outline
           .mdc-notched-outline__leading
           .mdc-notched-outline__notch
