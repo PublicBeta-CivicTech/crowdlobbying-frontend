@@ -7,6 +7,10 @@
   &.grey-darker {
     background-color: $clr-grey-darker;
   }
+  &.vertical-space {
+    padding-top: $vertical-space;
+    padding-bottom: $vertical-space;
+  }
 }
 
 // Page width: Full grid width (incl. outer margins)

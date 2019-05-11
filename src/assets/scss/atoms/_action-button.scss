@@ -1,9 +1,10 @@
+$social: ('facebook', 'twitter', 'whatsapp');
+
 .action-button {
   @include un-button();
   font-size: map-get($font-size, 's');
-  min-width: 200px;
   font-weight: bold;
-  padding: 13px 0 12px;
+  padding: 13px 16px 12px;
   color: $clr-white;
   background-color: $clr-red-dark;
   border-radius: $border-radius;
@@ -20,5 +21,30 @@
   }
   &.small {
     min-width: 116px;
+  }
+  &.medium {
+    min-width: 200px;
+  }
+  &.outline {
+    background-color: transparent;
+    color: $clr-red-dark;
+    border: 1px solid $clr-red-dark;
+  }
+  // Social
+  &.social {
+    @include offset-text();
+    padding: 15px 31px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50% 50%;
+  }
+  @each $network in $social {
+    &.#{$network} {
+      background-image: url('/assets/share/#{$network}.svg');
+      background-color: map-get($clr-social, $network);
+      &:hover {
+        background-color: shade(map-get($clr-social, $network), 10);
+      }
+    }
   }
 }

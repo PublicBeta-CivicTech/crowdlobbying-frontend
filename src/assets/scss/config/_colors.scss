@@ -3,6 +3,7 @@ $clr-black: #000000;
 $clr-white: #ffffff;
 $clr-almost-white: #f9f9f7;
 $clr-grey-lighter: #cfd8dc;
+$clr-grey-light: #4a4a4a;
 $clr-grey: #465a63;
 $clr-grey-dark: #37474f;
 $clr-grey-darker: #263237;
@@ -51,3 +52,11 @@ $clr-linkedin: #0077b5;
 $clr-instagram: #3f729b;
 $clr-youtube: #cd201f;
 $clr-pinterest: #bd081c;
+$clr-whatsapp: #25d366;
+
+// Workaround: Put all card colors in map to allow looping with @each
+$clr-social: (
+  facebook: $clr-facebook,
+  twitter: $clr-twitter,
+  whatsapp: $clr-whatsapp,
+);

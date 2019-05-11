@@ -1,0 +1,22 @@
+.textbox {
+  position: relative;
+  padding: 0 18px;
+  background-color: $clr-white;
+  color: $clr-grey-light;
+  border: 1px dashed $clr-grey-lighter;
+}
+
+.textbox__content {
+  font-family: $font-mono;
+  font-size: $font-size--mono-s;
+  line-height: $line-height--mono-s;
+  p {
+    margin: 1em 0;
+  }
+}
+
+.textbox__button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
