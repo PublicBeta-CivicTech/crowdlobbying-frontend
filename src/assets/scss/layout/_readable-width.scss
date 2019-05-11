@@ -1,7 +1,7 @@
 // Responsive
 
 @include mq($from: 'rat') {
-  .faq__richtext {
+  .readable-width {
     margin-left: auto;
     margin-right: auto;
     width: grid-width($cols: 10);
@@ -9,7 +9,7 @@
 }
 
 @include mq($from: 'rabbit') {
-  .faq__richtext {
+  .readable-width {
     width: grid-width($cols: 8);
   }
 }
