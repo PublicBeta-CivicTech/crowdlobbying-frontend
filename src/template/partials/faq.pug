@@ -1,0 +1,7 @@
+section.faq
+  +stripe()
+    .faq__richtext.richtext
+      h1 #{faq.title}
+      each item in faq.content
+        h2 #{item.question}
+        p #{item.answer}

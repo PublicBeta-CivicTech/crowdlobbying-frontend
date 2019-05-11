@@ -21,17 +21,13 @@ html(lang=lang)
     include ../partials/campaign-info
     include ../partials/how-it-works
     include ../partials/officials
+    include ../partials/donorbox
 
-    section.donorbox
+    section.share(style='background-color: deeppink; padding-top: 2em; padding-bottom: 2em;')
       +stripe()
-        .donorbox__inner
-          script(src='https://donorbox.org/widget.js', paypalexpress='false')
-          iframe(src='https://donorbox.org/embed/crowdlobbying-digitaler-pass', height='685px', width='100%', style='max-width:500px; min-width:310px; max-height:none!important', seamless, name='donorbox', frameborder='0', scrolling='no', allowpaymentrequest)
+        h1 Sharing goes here
 
-    section.faq
-      +stripe()
-        .faq__richtext.richtext
-          block faq
+    include ../partials/faq
 
     +stripe()
       block content
