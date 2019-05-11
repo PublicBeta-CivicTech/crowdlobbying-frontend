@@ -3,5 +3,6 @@ section.faq
     .richtext.readable-width
       h1 #{faq.title}
       each item in faq.content
-        h2 #{item.question}
+        if item.question
+          h2 #{item.question}
         p #{item.answer}
