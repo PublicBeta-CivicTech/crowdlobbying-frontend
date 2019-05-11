@@ -21,4 +21,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      pkg: JSON.stringify(require('../package.json')),
+    }),
+  ],
 }

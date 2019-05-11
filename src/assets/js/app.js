@@ -7,6 +7,10 @@ import copyToClipboard from './utils/copyToClipboard'
 import { MDCSelect } from '@material/select'
 import { scrollOffset } from './utils/scroll'
 import appMenu from './modules/menu'
+import { signConsole } from '@pixelherz/js-utils/fun'
+
+// Console signature
+signConsole(pkg)
 
 // MDC: Initialize material design components
 // MDCSelect

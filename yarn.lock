@@ -188,6 +188,11 @@
   dependencies:
     "@material/feature-targeting" "^0.44.1"
 
+"@pixelherz/js-utils@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@pixelherz/js-utils/-/js-utils-1.1.2.tgz#ebf36521f23eff7ff2ab00615ea9b4c8e2df7a97"
+  integrity sha512-E8hOPLYwoB51wLN0iOzYEUe1eKVnapfs/EdYtWOdKwV2dQRi5JMe/rkQF53SwXkESoEwwQtSo9cAVRi/I5OgCQ==
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.0.tgz#4beb190e239fe05bac5e57e8d8376cab4f20c65c"

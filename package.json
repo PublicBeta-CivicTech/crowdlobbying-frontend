@@ -1,9 +1,14 @@
 {
-  "name": "clo-frontend",
+  "name": "crowd-lobbying-frontend",
   "version": "0.1.0",
-  "description": "Frontend for crowd-lobbying.ch. Built with helloFront boilerplate.",
+  "description": "Frontend for crowd-lobbying.ch.",
   "private": true,
   "main": "gulpfile.js",
+  "author": {
+    "name": "Pixelherz GmbH",
+    "email": "mail@pixelherz.com",
+    "url": "'https://pixelherz.com"
+  },
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --production && gulp rev && gulp revreplace",
@@ -20,6 +25,7 @@
   },
   "dependencies": {
     "@material/select": "^2.0.0",
+    "@pixelherz/js-utils": "^1.1.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
