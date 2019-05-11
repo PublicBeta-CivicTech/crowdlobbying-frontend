@@ -8,12 +8,62 @@
 
 // RichText
 
-.footer h2,
-.footer p {
-  font-size: map-get($font-size, 's');
-  line-height: map-get($line-height, 's');
+.footer {
+  h2,
+  p {
+    font-size: map-get($font-size, 's');
+    line-height: map-get($line-height, 's');
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  h2.no-space + p {
+    margin-top: 0;
+  }
+
+  p.no-space {
+    margin-top: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:active,
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
 }
 
-.footer h2 {
-  font-weight: bold;
+// Responsive
+// NOTE: This are generic multicol-layout styles.
+// TODO: Move to layouts if reused/reusable
+
+@include mq($from: 'rat') {
+  .cols {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col {
+    margin-left: grid-width($gutters: 1);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .col-3 {
+    width: grid-width($cols: 3);
+  }
+
+  .col-6 {
+    width: grid-width($cols: 6);
+  }
 }

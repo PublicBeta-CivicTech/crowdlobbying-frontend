@@ -1,24 +1,29 @@
 footer.footer
-  +stripe()(viewportClass='grey')
-    section.footer__about
-      h2 Über uns
-      p Crowd-Lobbying ist eine unabhängige Schweizer Kampagnenplattform. Wir ermöglichen Menschen, Nachrichten an das Parlament zu schicken, die ihnen am Herzen liegen. Gemeinsam setzen wir uns ein für eine Schweiz, in der wir leben wollen. Die Plattform ist ein Community-Projekt und wurde an den Campaign Hackdays 2019 entwickelt.
-      h2 Medienkontakt
-      p
-        | Che Wagner
-        br
-        | Tel. +41 76 230 75 29
-        br
-        | che.wagner@publicbeta.ch
-      h2 Impressum
-      p
-        | Daniel Graf
-        br
-        | Dammerkirchstr. 44
-        br
-        | CH-4056 Basel
-  +stripe()(viewportClass='grey-darker')
+  +stripe()(viewportClass='grey vertical-space')
+    section.cols.footer__about
+      .col.col-6
+        h2.no-space Über uns
+        p Crowd-Lobbying ist eine unabhängige Schweizer Kampagnenplattform. Wir ermöglichen Menschen, Nachrichten an das Parlament zu schicken, die ihnen am Herzen liegen. Gemeinsam setzen wir uns ein für eine Schweiz, in der wir leben wollen. Die Plattform ist ein Community-Projekt und wurde an den Campaign Hackdays 2019 entwickelt.
+      .col.col-3
+        h2.no-space Medienkontakt
+        p
+          | Che Wagner
+          br
+          | Tel. +41 76 230 75 29
+          br
+          | che.wagner@publicbeta.ch
+      .col.col-3
+        h2.no-space Impressum
+        p
+          | Daniel Graf
+          br
+          | Dammerkirchstr. 44
+          br
+          | CH-4056 Basel
+  +stripe()(viewportClass='grey-darker vertical-space')
     section.footer__privacy
       h2 Datenschutz
       p Der Schutz der Privatsphäre und namentlich der Datenschutz sind uns wichtig. Gestützt auf Artikel 13 der schweizerischen Bundesverfassung und die datenschutzrechtlichen Bestimmungen des Bundes (Datenschutzgesetz, DSG) hat jede Person Anspruch auf Schutz ihrer Privatsphäre sowie auf Schutz vor Missbrauch ihrer persönlichen Daten. Wir halten diese Bestimmungen ein. Persönliche Daten werden streng vertraulich behandelt und weder an Dritte verkauft noch weitergegeben.
       p Wenn Sie unsere Website besuchen oder unsere E-Mails lesen, speichern wir verschiedene Informationen. Einige Daten geben Sie bei der Registrierung für Dienstleistungen selbst bekannt. Andere, nicht persönliche Daten werden aufgrund von technischen Abläufen gespeichert, beispielsweise IP-Adressen.
+      hr
+      p.no-space © #{new Date().getFullYear()} #[a(href='https://www.publicbeta.ch/') Verein Public Beta, Basel]
