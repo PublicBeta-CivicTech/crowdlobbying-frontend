@@ -24,10 +24,8 @@ html(lang=lang)
     include ../partials/donorbox
     include ../partials/share
     include ../partials/faq
-
-    +stripe()
-      block content
-
     include ../partials/footer
 
     script(src=path + 'assets/app.js', async)
+
+    block content
