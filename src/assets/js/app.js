@@ -2,6 +2,7 @@ window.$ = window.jQuery = require('jquery')
 window.slick = require('slick-carousel')
 
 import 'what-input'
+import copyToClipboard from './utils/copyToClipboard'
 import { MDCSelect } from '@material/select'
 import appMenu from './modules/menu'
 
@@ -11,9 +12,12 @@ document.querySelectorAll('.mdc-select').forEach(elm => {
   new MDCSelect(elm)
 })
 
-// App namespace
+// Global namespaces
 window.app = {
   menu: appMenu,
+}
+window.utils = {
+  copy: copyToClipboard,
 }
 
 // Doc ready handler
