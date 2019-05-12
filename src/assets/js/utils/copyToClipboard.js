@@ -4,7 +4,7 @@ const copyToClipboard = str => {
   document.body.appendChild(el)
   el.select()
   document.execCommand('copy')
-  // document.body.removeChild(el)
+  document.body.removeChild(el)
 }
 
 export default copyToClipboard
