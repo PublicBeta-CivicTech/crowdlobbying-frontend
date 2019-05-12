@@ -25,6 +25,25 @@
   line-height: map-get($line-height, 'l');
   font-weight: bold;
   margin: 25px 0;
+  opacity: 0;
+  transform: translateX(75px);
+  transition: opacity $trans-duration $trans-cubic,
+    transform $trans-duration $trans-cubic;
+  .is-active & {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  $index: 0;
+  $limit: 15;
+  @while $index < $limit {
+    .is-active &:nth-child(#{$limit}n + #{$index + 1}) {
+      transition-delay: #{$trans-duration + 0.1s + $index * 0.05s};
+    }
+    &:nth-child(#{$limit}n + #{$index + 1}) {
+      transition-delay: 0s;
+    }
+    $index: $index + 1;
+  }
 }
 
 .menu__link {
