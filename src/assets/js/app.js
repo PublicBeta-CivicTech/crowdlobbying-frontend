@@ -43,6 +43,7 @@ $(document).ready(() => {
       autoplaySpeed: 1500,
       variableWidth: true,
       centerMode: true,
+      slidesToShow: 5,
     })
     .addClass('is-ready')
 })
