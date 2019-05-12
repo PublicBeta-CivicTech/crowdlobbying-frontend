@@ -36,6 +36,8 @@ window.addEventListener('scroll', scrollHandler)
 
 // Doc ready handler
 $(document).ready(() => {
+  // Init menu
+  app.menu.init()
   // Init slick carousel
   $('.messages-carousel__cards')
     .slick({
