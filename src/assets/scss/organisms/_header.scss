@@ -13,6 +13,9 @@
   &.use-background {
     background-color: rgba($clr-black, 0.5);
   }
+  &.force-background {
+    background-color: rgba($clr-black, 0.5);
+  }
 }
 
 .header__logotype {

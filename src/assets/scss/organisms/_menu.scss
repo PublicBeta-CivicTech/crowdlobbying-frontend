@@ -1,0 +1,51 @@
+.menu {
+  position: fixed;
+  z-index: $layer-menu;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 69px;
+  padding-bottom: $vertical-space;
+  background-color: $clr-almost-white;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity $trans-duration $trans-cubic,
+    transform $trans-duration $trans-cubic;
+  &.is-active {
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.menu__item {
+  font-size: map-get($font-size, 'l');
+  line-height: map-get($line-height, 'l');
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.menu__link {
+  color: $clr-black;
+  &:active,
+  &:hover,
+  &:focus {
+    color: $clr-red-dark;
+  }
+}
+
+/* Responsive */
+
+@include mq($from: 'rat', $until: 'rabbit') {
+  .menu {
+    padding-top: 91px + 15;
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .menu {
+    padding-top: 106px + 25;
+  }
+}

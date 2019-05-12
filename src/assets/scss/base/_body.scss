@@ -1,0 +1,4 @@
+// No scrolling while menu is active
+body.has-menu {
+  overflow: hidden;
+}
