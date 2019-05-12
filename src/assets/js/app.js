@@ -1,6 +1,7 @@
 window.$ = window.jQuery = require('jquery')
 window.slick = require('slick-carousel')
 window._ = require('underscore')
+window.scrollToElement = require('scroll-to-element')
 
 import 'what-input'
 import copyToClipboard from './utils/copyToClipboard'

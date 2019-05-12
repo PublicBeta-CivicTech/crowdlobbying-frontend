@@ -55,6 +55,7 @@
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
     "sass-mq": "^5.0.0",
+    "scroll-to-element": "^2.0.3",
     "size": "^1.0.0",
     "slick-carousel": "^1.8.1",
     "uglifyjs-webpack-plugin": "^1.2.5",

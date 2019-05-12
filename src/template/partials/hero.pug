@@ -5,4 +5,4 @@ section.hero
         h2 #{hero.heading}
         h1 #{hero.title}
         p #{hero.footerLine}
-        button.action-button.medium #{hero.callToAction}
+        button.action-button.medium(onclick='scrollToElement(".how-it-works", { offset: document.querySelector(".header").offsetHeight * -1 })') #{hero.callToAction}
