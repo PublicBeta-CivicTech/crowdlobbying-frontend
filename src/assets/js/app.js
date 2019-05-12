@@ -27,10 +27,10 @@ window.utils = {
 }
 
 // Global scroll handler
-const scrollHandler = _.debounce(() => {
+const scrollHandler = _.throttle(() => {
   const action = scrollOffset().y > 50 ? 'add' : 'remove'
   document.querySelector('.header').classList[action]('use-background')
-}, 50)
+}, 100)
 window.addEventListener('scroll', scrollHandler)
 
 // Doc ready handler
