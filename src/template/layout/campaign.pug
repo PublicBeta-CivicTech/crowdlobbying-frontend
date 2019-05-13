@@ -28,7 +28,13 @@ html(lang=lang)
     include ../partials/footer
     include ../partials/menu
 
+    script(async, src=path + 'assets/app.js')
     script(async, src='https://static.addtoany.com/menu/page.js')
-    script(src=path + 'assets/app.js', async)
+    script(async, src='https://www.googletagmanager.com/gtag/js?id=UA-139693155-2')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-139693155-2');
 
     block content
