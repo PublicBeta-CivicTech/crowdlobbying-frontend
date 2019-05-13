@@ -62,7 +62,7 @@
   }
 }
 
-/* Responsive */
+// Responsive
 
 @include mq($from: 'rat', $until: 'rabbit') {
   .menu {
