@@ -22,8 +22,8 @@
   width: 75px;
   height: 34px;
   margin-bottom: 6px;
-  transition: width $trans-duration $trans-cubic, height $trans-duration,
-    $trans-cubic, transform $trans-duration, $trans-cubic;
+  transition: width $trans-duration $trans-cubic,
+    height $trans-duration $trans-cubic, transform $trans-duration $trans-cubic;
 }
 
 .header__home-link {
