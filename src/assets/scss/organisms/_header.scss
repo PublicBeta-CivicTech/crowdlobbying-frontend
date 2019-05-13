@@ -23,7 +23,7 @@
   height: 34px;
   margin-bottom: 6px;
   transition: width $trans-duration $trans-cubic, height $trans-duration,
-    $trans-cubic;
+    $trans-cubic, transform $trans-duration, $trans-cubic;
 }
 
 .header__home-link {
@@ -52,10 +52,17 @@
   .header {
     padding-top: 20px;
     padding-bottom: 20px;
+    &.mini {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
   .header__logotype {
     width: 100px;
     height: 45px;
+    .header.mini & {
+      transform: scale(0.666);
+    }
   }
 }
 
