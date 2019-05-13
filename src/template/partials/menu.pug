@@ -2,14 +2,14 @@ nav.menu#menu
   +stripe()
     ul.menu__items
       li.menu__item
-        a.menu__link(onclick='app.menu.hide()') Startseite
+        a.menu__link(onclick='app.menu.hide()' href="/") Startseite
       li.menu__item
         a.menu__link(onclick='app.menu.hide(); scrollToElement(".how-it-works", { offset: document.querySelector(".header").offsetHeight * -1 })') Mitmachen
       li.menu__item
-        a.menu__link(onclick='app.menu.hide()') Ständerätinnen und Ständeräte
+        a.menu__link(onclick='app.menu.hide(); scrollToElement(".how-it-works", { offset: document.querySelector(".header").offsetHeight * -1 })') Ständerätinnen und Ständeräte
       li.menu__item
-        a.menu__link(onclick='app.menu.hide()') Nachrichten-Feed
+        a.menu__link(onclick='app.menu.hide()' href='/feed.html') Nachrichten-Feed
       li.menu__item
-        a.menu__link(onclick='app.menu.hide()') Kontakt
+        a.menu__link(onclick='app.menu.hide(); scrollToElement(".footer", { offset: document.querySelector(".header").offsetHeight * -1 })') Medienkontakt
       li.menu__item
-        a.menu__link(onclick='app.menu.hide()') Datenschutz
+        a.menu__link(onclick='app.menu.hide(); scrollToElement(".footer", { offset: document.querySelector(".header").offsetHeight * -1 })') Datenschutz
