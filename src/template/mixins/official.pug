@@ -7,9 +7,9 @@ mixin official(name, party, state, count, image)
     div.official__footer
       span.official__name #[strong #{name}] #{party}
       if state < 0
-        span.official__state.against-us Stimmabsicht
+        span.official__state.against-us(title='gegen uns') Stimmabsicht
       else if state > 0
-        span.official__state.with-us Stimmabsicht
-      else 
-        span.official__state.unknown Stimmabsicht
+        span.official__state.with-us(title='mit uns') Stimmabsicht
+      else
+        span.official__state.unknown(title='unbekannt') Stimmabsicht
       button.action-button.small.official__button(class=state > 0 ? 'visually-hidden' : '') Lobbyieren
