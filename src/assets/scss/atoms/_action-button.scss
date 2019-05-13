@@ -34,10 +34,20 @@ $social: ('facebook', 'twitter', 'whatsapp');
   // Social
   &.social {
     @include offset-text();
-    padding: 15px 31px;
+    padding: 0;
+    width: 62px;
+    height: 48px;
+    margin-left: 10px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 50% 50%;
+    &:first-child {
+      margin-left: 0;
+    }
+    // Override addtoany.com styles
+    .a2a_svg {
+      display: none;
+    }
   }
   @each $network in $social {
     &.#{$network} {
