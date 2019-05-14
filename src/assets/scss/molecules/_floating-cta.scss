@@ -1,0 +1,13 @@
+.floating-cta {
+  position: fixed;
+  z-index: $layer-floating-cta;
+  left: 50%;
+  bottom: $vertical-space * 1.5;
+  transform: translateX(-50%);
+}
+
+@include mq($until: 'mouse') {
+  .floating-cta {
+    bottom: $vertical-space * 0.5;
+  }
+}

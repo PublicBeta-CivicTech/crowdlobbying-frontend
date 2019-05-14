@@ -1,8 +1,5 @@
 section.messages-grid
   +stripe()(pageClass='mobile-fullwidth' layoutClass='mobile-fullwidth')
-    .messages-grid__cta
-      a(href='/#how-it-works')
-        button.action-button.medium Mitmachen
     .messages-grid__cards
       each message, index in messages
         //- This is a workaround as we do not support breakpoints in markup yet
