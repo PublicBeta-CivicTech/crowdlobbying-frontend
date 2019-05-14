@@ -3,7 +3,6 @@ window.slick = require('slick-carousel')
 window._ = require('underscore')
 window.scrollToElement = require('scroll-to-element')
 
-import 'what-input'
 import copyToClipboard from './utils/copyToClipboard'
 import { MDCSelect } from '@material/select'
 import { scrollOffset } from './utils/scroll'
