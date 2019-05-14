@@ -1,0 +1,46 @@
+.messages-grid {
+  background-color: $clr-grey-dark;
+  padding-top: map-get($header-height, 'default');
+}
+
+// Responsive
+
+@include mq($from: 'mouse') {
+  .messages-grid__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .messages-grid__slide {
+    margin-right: grid-width($gutters: 1);
+    margin-bottom: grid-width($gutters: 1);
+  }
+}
+
+@include mq($from: 'mouse', $until: 'rabbit') {
+  .messages-grid__slide {
+    width: grid-width($cols: 6);
+    &:nth-child(2n + 0) {
+      margin-right: 0;
+    }
+  }
+}
+
+@include mq($from: 'rat', $until: 'rabbit') {
+  .messages-grid {
+    padding-top: map-get($header-height, 'rat');
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .messages-grid {
+    padding-top: map-get($header-height, 'rabbit');
+  }
+
+  .messages-grid__slide {
+    width: grid-width($cols: 4);
+    &:nth-child(3n + 0) {
+      margin-right: 0;
+    }
+  }
+}

@@ -29,8 +29,19 @@
 /* Responsive */
 
 @include mq($until: 'mouse') {
+  .page-width {
+    &.mobile-fullwidth {
+      max-width: 100%;
+    }
+  }
+
   .layout-width {
     margin: 0 map-get($grid-offset, 'default');
+    &.mobile-fullwidth {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
   }
 }
 

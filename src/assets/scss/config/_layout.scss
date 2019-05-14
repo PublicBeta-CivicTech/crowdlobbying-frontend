@@ -22,5 +22,13 @@ $grid-offset: (
 // Base for vertical spacing
 $vertical-space: 24px;
 
+// Header height for breakpoints
+// NOTE: Refers to the unmodified header-height (class `.mini` not applied)
+$header-height: (
+  'default': 69px,
+  'rat': 91px,
+  'rabbit': 106px,
+);
+
 // Default border radius
 $border-radius: 3px;

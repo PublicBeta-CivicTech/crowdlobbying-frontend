@@ -1,6 +1,6 @@
 mixin card(sender, recipientName, recipientParty, subject, quote, index)
   - var colors = [ 'pink', 'purple', 'purple-dark', 'blue-dark', 'blue', 'cyan', 'teal', 'green', 'orange-dark', 'red', ]
-  blockquote.card(class=colors[index % colors.length])
+  blockquote.card(class!=colors[index % colors.length])
     header.card__header
       cite.card__meta
         span.card__meta-line An: #[strong #{recipientName}] #{recipientParty}

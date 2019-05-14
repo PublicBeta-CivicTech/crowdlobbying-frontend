@@ -30,7 +30,7 @@ $social: ('facebook', 'twitter', 'whatsapp');
     padding-bottom: 21px;
   }
   &.outline {
-    background-color: transparent;
+    background-color: $clr-white;
     color: $clr-red-dark;
     border: 1px solid $clr-red-dark;
   }

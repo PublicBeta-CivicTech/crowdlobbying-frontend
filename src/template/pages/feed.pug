@@ -1,0 +1,17 @@
+extends ../layout/feed
+
+append config
+  - var title = "Campaign Title"
+  - var metaDesc = "Campaign Description"
+  - var template = 't-feed'
+
+block data
+  -
+    var scrollToTop = {
+      theme: 'dark'
+    }
+    faq.theme = 'dark'
+
+block content
+  //
+    #{pkg.name} v.#{pkg.version}+548

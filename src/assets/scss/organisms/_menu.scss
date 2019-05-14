@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding-top: 69px;
+  padding-top: map-get($header-height, 'default');
   padding-bottom: $vertical-space;
   background-color: $clr-almost-white;
   pointer-events: none;
@@ -66,12 +66,12 @@
 
 @include mq($from: 'rat', $until: 'rabbit') {
   .menu {
-    padding-top: 91px + 15;
+    padding-top: map-get($header-height, 'rat') + 15px;
   }
 }
 
 @include mq($from: 'rabbit') {
   .menu {
-    padding-top: 106px + 25;
+    padding-top: map-get($header-height, 'rabbit') + 25px;
   }
 }

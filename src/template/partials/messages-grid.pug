@@ -1,0 +1,13 @@
+section.messages-grid
+  +stripe()(pageClass='mobile-fullwidth' layoutClass='mobile-fullwidth')
+    .messages-grid__cards
+      each message, index in messages
+        .messages-grid__slide
+          +card(
+            message.sender,
+            message.recipientName,
+            message.recipientParty,
+            message.subject,
+            message.quote,
+            index
+          )
