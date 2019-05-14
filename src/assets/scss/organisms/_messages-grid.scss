@@ -3,6 +3,13 @@
   padding-top: map-get($header-height, 'default');
 }
 
+.messages-grid__cta {
+  position: absolute;
+  left: 50%;
+  top: calc(50vh - #{map-get($header-height, 'default')});
+  transform: translate(-50%, -50%);
+}
+
 // Responsive
 
 @include mq($from: 'mouse') {
@@ -30,11 +37,19 @@
   .messages-grid {
     padding-top: map-get($header-height, 'rat');
   }
+
+  .messages-grid__cta {
+    top: calc(50vh - #{map-get($header-height, 'rat')});
+  }
 }
 
 @include mq($from: 'rabbit') {
   .messages-grid {
     padding-top: map-get($header-height, 'rabbit');
+  }
+
+  .messages-grid__cta {
+    top: calc(50vh - #{map-get($header-height, 'rabbit')});
   }
 
   .messages-grid__slide {
