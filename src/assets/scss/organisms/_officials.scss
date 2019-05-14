@@ -39,15 +39,6 @@
   @include state-badge($position: 'before');
 }
 
-.officials__richtext {
-  p {
-    @include fluid-type('s');
-  }
-  p.lead {
-    font-weight: bold;
-  }
-}
-
 // Responsive
 
 @include mq($until: 'mouse') {

@@ -15,6 +15,9 @@
     @include fluid-type('s');
     margin: $vertical-space / 2 0;
   }
+  p.lead {
+    font-weight: bold;
+  }
   .no-space-top {
     margin-top: 0;
   }
