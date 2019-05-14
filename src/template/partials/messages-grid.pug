@@ -5,6 +5,13 @@ section.messages-grid
         button.action-button.medium Mitmachen
     .messages-grid__cards
       each message, index in messages
+        //- This is a workaround as we do not support breakpoints in markup yet
+        //- Compare ./src/assets/scss/organisms/_messages-grid.scss
+        if index > 1 && index < 4
+          - var className = index === 2 ? 'donorbox-cols-2' : 'donorbox-cols-3'
+          .messages-grid__slide.donorbox(class!=className)
+            .messages-grid__donorbox
+              p ((donorbox here))
         .messages-grid__slide
           +card(
             message.sender,

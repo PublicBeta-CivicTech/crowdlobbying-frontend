@@ -5,9 +5,25 @@
 
 .messages-grid__cta {
   position: absolute;
+  z-index: 2;
   left: 50%;
   top: calc(50vh - #{map-get($header-height, 'default')});
   transform: translate(-50%, -50%);
+}
+
+.messages-grid__donorbox {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-color: $clr-grey-lighter;
+  p {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
 }
 
 // Responsive
@@ -57,5 +73,49 @@
     &:nth-child(3n + 0) {
       margin-right: 0;
     }
+  }
+}
+
+// Workaround: We don't have breakpoints for markup yet.
+// Thus we need to render Donationbox twice and toggle visibility depending
+// on the breakpoint.
+
+@include mq($until: 'mouse') {
+  .messages-grid__slide.donorbox-cols-2 {
+    display: none;
+  }
+}
+
+@include mq($from: 'mouse', $until: 'rabbit') {
+  .messages-grid__slide:nth-child(1),
+  .messages-grid__slide:nth-child(4) {
+    margin-right: grid-width($gutters: 1);
+  }
+
+  .messages-grid__slide:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .messages-grid__slide.donorbox {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .messages-grid__slide.donorbox-cols-3 {
+    display: none;
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .messages-grid__slide.donorbox {
+    width: grid-width($cols: 8);
+  }
+
+  .messages-grid__slide.donorbox-cols-2 {
+    display: none;
+  }
+
+  .messages-grid__slide:nth-child(4) {
+    margin-right: 0;
   }
 }
