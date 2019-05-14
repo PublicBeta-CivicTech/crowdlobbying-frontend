@@ -8,7 +8,7 @@ section.messages-grid
           - var className = index === 2 ? 'donorbox-cols-2' : 'donorbox-cols-3'
           .messages-grid__slide.donorbox(class!=className)
             .messages-grid__donorbox
-              p ((donorbox here))
+              include ./donorbox-embed
         .messages-grid__slide
           +card(
             message.sender,

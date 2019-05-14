@@ -5,6 +5,7 @@
 
 .messages-grid__donorbox {
   position: relative;
+  overflow: auto;
   width: 100%;
   height: 260px;
   background-color: $clr-grey-lighter;
