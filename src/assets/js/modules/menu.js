@@ -38,6 +38,13 @@ const hide = () => {
   _stateCtrl(false)
 }
 
+// Key listener (hide menu if esc pressed)
+const keyListener = e => {
+  if (e.key === 'Escape') {
+    hide()
+  }
+}
+
 // Controller for state updates
 const _stateCtrl = activate => {
   clearTimeout(timeoutId)
@@ -83,4 +90,4 @@ const _updateActiveState = activate => {
   header && header.classList[action](forceBgClass)
 }
 
-export default { hide, init, toggle }
+export default { hide, init, toggle, keyListener }

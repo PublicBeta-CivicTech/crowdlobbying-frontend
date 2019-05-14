@@ -9,6 +9,14 @@ import { scrollOffset } from './utils/scroll'
 import appMenu from './modules/menu'
 import { signConsole } from '@pixelherz/js-utils/fun'
 
+// Global namespaces
+window.app = {
+  menu: appMenu,
+}
+window.utils = {
+  copy: copyToClipboard,
+}
+
 // Console signature
 signConsole(pkg)
 
@@ -18,13 +26,8 @@ document.querySelectorAll('.mdc-select').forEach(elm => {
   new MDCSelect(elm)
 })
 
-// Global namespaces
-window.app = {
-  menu: appMenu,
-}
-window.utils = {
-  copy: copyToClipboard,
-}
+// Hide main menu if esc key pressed
+document.addEventListener('keyup', app.menu.keyListener)
 
 // Global scroll handler
 const scrollHandler = _.throttle(() => {
