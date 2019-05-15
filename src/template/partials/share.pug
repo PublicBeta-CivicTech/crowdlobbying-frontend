@@ -21,4 +21,10 @@ section.share
         p kannst du einer Ständerätin oder einem Ständerat deiner Wahl ein Argument schicken, wieso du gegen eine E-ID von von privaten Unternehmen bist.
         p Es würde mir sehr viel bedeuten, wenn Du dieses Projekt ebenfalls unterstützen würdest.
         p Vielen Dank und freundliche Grüsse
-      button.action-button.outline.textbox__button(onclick!='utils.copy(\'' + share.clipboardText + '\')') Text kopieren
+      button.action-button.outline.textbox__button(
+        onclick!='utils.copy(\'' + share.clipboardText + '\'); app.actionButton.showOverlay()'
+        data-overlay-state='ok'
+        data-overlay-label='kopiert'
+        data-overlay-autohide='true'
+      ) Text kopieren
+        .action-button__overlay

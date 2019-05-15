@@ -7,11 +7,13 @@ import copyToClipboard from './utils/copy-to-clipboard'
 import { MDCSelect } from '@material/select'
 import { scrollOffset } from './utils/scroll'
 import appMenu from './modules/menu'
+import actionButton from './modules/action-button'
 import { signConsole } from '@pixelherz/js-utils/fun'
 
 // Global namespaces
 window.app = {
   menu: appMenu,
+  actionButton: actionButton,
 }
 window.utils = {
   copy: copyToClipboard,

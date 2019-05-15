@@ -77,3 +77,36 @@ $social: ('facebook', 'twitter', 'whatsapp');
     background-image: url('/assets/action-button/up--red-dark.svg');
   }
 }
+
+// Overlays, used for visual feedback ("Success!")
+.action-button__overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background-color: $clr-state-green;
+  color: $clr-white;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity $trans-duration $trans-cubic;
+  .action-button.has-overlay & {
+    opacity: 1;
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: 6px;
+  }
+  &.ok {
+    &::after {
+      background-image: url('/assets/action-button/check.svg');
+    }
+  }
+}
