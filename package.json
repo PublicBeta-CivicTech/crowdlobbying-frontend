@@ -1,6 +1,6 @@
 {
   "name": "crowd-lobbying-frontend",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "Frontend for crowd-lobbying.ch.",
   "private": true,
   "main": "gulpfile.js",

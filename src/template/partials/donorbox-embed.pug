@@ -1,2 +1,14 @@
-script(src='https://donorbox.org/widget.js', paypalexpress='false')
-iframe(src='https://donorbox.org/embed/crowdlobbying-digitaler-pass', height='685px', width='100%', style='max-width:500px; min-width:310px; max-height:none!important', seamless, name='donorbox', frameborder='0', scrolling='no', allowpaymentrequest)
+//- DE: https://donorbox.org/embed/crowdlobbying-digitaler-pass
+//- FR: https://donorbox.org/embed/crowd-lobbying-digitaler-pass-2-2
+script(src='https://donorbox.org/widget.js', paypalexpress='false', defer)
+iframe.donorbox__iframe(
+    src='https://donorbox.org/embed/crowdlobbying-digitaler-pass',
+    height='685px',
+    width='100%',
+    style='min-width:310px; max-height:none!important',
+    seamless,
+    name='donorbox',
+    frameborder='0',
+    scrolling='no',
+    allowpaymentrequest
+  )
