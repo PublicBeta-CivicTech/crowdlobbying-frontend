@@ -6,6 +6,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  overflow-y: auto;
   padding-top: map-get($header-height, 'default');
   padding-bottom: $vertical-space;
   background-color: $clr-almost-white;
