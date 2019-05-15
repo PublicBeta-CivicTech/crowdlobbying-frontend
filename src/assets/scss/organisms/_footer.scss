@@ -1,18 +1,22 @@
+.footer {
+  // WORKAROUND/NOTE: Add some extra space to ensure the action button
+  // `.floating-cta` with fixed position does not cover the footer content.
+  padding-bottom: $vertical-space * 3.5;
+  background-color: $clr-grey-darker;
+}
+
 .footer__about,
 .footer__privacy {
   padding-top: 55px;
-  padding-bottom: 40px;
 }
 
 .footer__about {
   color: $clr-white;
+  padding-bottom: 40px;
 }
 
 .footer__privacy {
   color: rgba($clr-white, 0.75);
-  // WORKAROUND/NOTE: Add some extra space to ensure the action button
-  // `.floating-cta` with fixed position does not cover the footer content.
-  padding-bottom: $vertical-space * 3.5;
 }
 
 // RichText
