@@ -6,9 +6,9 @@ section.act
     .act__select-message
       each message, index in messages
         blockquote.act__message(onclick='app.act.selectMessage()') #{message}
-    .act__form.act__center-col.center-text.richtext
+    .act__center-col.center-text.richtext
       h2 Absender
-      form(action='/act-confirm.html')
+      form(action='/act-confirm.html').act__form
         +mdcTextField('Vorname*')(class='act__input')
         +mdcTextField('Nachname*')(class='act__input')
         +mdcTextField('E-Mail*', 'email')(class='act__input')
