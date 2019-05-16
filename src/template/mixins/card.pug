@@ -1,9 +1,10 @@
-mixin card(sender, recipientName, recipientParty, subject, quote, index)
+mixin card(quote, index, sender, recipientName, recipientParty, subject)
   - var colors = [ 'pink', 'purple', 'purple-dark', 'blue-dark', 'blue', 'cyan', 'teal', 'green', 'orange-dark', 'red', ]
   blockquote.card(class!=colors[index % colors.length])
-    header.card__header
-      cite.card__meta
-        span.card__meta-line An: #[strong #{recipientName}] #{recipientParty}
-        span.card__meta-line Von: #{sender}
-        span.card__meta-line Betreff: #{subject}
+    if (recipientName && recipientParty && sender && subject)
+      header.card__header
+        cite.card__meta
+          span.card__meta-line An: #[strong #{recipientName}] #{recipientParty}
+          span.card__meta-line Von: #{sender}
+          span.card__meta-line Betreff: #{subject}
     p.card__quote #{quote}

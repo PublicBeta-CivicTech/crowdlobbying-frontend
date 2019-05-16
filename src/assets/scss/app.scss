@@ -2,6 +2,9 @@
 
 // Material design components
 @import '@material/select/mdc-select';
+@import '@material/textfield/mdc-text-field';
+@import '@material/form-field/mdc-form-field';
+@import '@material/checkbox/mdc-checkbox';
 
 // Slick carousel: Set defaults and import
 $slick-font-path: '/assets/slick/' !default;

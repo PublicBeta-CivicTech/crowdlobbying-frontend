@@ -1,0 +1,21 @@
+extends ../layout/act
+
+append config
+  - var title = "Campaign Title"
+  - var metaDesc = "Campaign Description"
+  - var template = 't-act'
+
+block data
+  -
+    var header = {
+      forceBg: true,
+    }
+    var messages = [
+      { quote: '«Die digitale Idenität auszustellen, muss eine Staatsaufgabe bleiben.»' },
+      { quote: '«Meinen Daten vertraue ich nicht privaten Unternehmen an.»' },
+      { quote: '«Ich will meinen digitalen Pass nicht mit meinen Daten bezahlen.»' },
+    ]
+
+block content
+  //
+    #{pkg.name} v.#{pkg.version}+34

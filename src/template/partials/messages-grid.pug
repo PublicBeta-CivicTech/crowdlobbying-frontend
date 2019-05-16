@@ -11,10 +11,10 @@ section.messages-grid
               include ./donorbox-embed
         .messages-grid__slide
           +card(
+            message.quote,
+            index,
             message.sender,
             message.recipientName,
             message.recipientParty,
-            message.subject,
-            message.quote,
-            index
+            message.subject
           )
