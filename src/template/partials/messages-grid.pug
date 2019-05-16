@@ -4,11 +4,14 @@ section.messages-grid
       each message, index in messages
         //- This is a workaround as we do not support breakpoints in markup yet
         //- Compare ./src/assets/scss/organisms/_messages-grid.scss
-        if index > 1 && index < 4
-          - var className = index === 2 ? 'donorbox-cols-2' : 'donorbox-cols-3'
-          .messages-grid__slide.donorbox(class!=className)
-            .messages-grid__donorbox
-              include ./donorbox-embed
+        if index > 2 && index < 5
+          - var className = index === 3 ? 'donate-a' : 'donate-b'
+          .messages-grid__slide(class!=className)
+            section.messages-grid__donate.richtext.center-text
+              h1 Spenden
+              p Mit Ihrer Spende bringen wir diese Kampagne weiter.
+              a(href='/index.html#donate')
+                button.action-button Jetzt spenden
         .messages-grid__slide
           +card(
             message.quote,
