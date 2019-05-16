@@ -1,6 +1,6 @@
-mixin mdcTextField(label)
+mixin mdcTextField(label, type = 'text')
   .mdc-text-field.mdc-text-field--outlined(class!=attributes.class)
-    input#tf-outlined.mdc-text-field__input(type='text')
+    input#tf-outlined.mdc-text-field__input(type=type)
     .mdc-notched-outline
       .mdc-notched-outline__leading
       .mdc-notched-outline__notch

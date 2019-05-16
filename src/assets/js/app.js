@@ -6,14 +6,16 @@ import copyToClipboard from './utils/copy-to-clipboard'
 import { MDCTextField } from '@material/textfield'
 import { MDCSelect } from '@material/select'
 import { scrollOffset } from './utils/scroll'
-import appMenu from './modules/menu'
+import act from './modules/act'
 import actionButton from './modules/action-button'
+import appMenu from './modules/menu'
 import { signConsole } from '@pixelherz/js-utils/fun'
 
 // Global namespaces
 window.app = {
-  menu: appMenu,
+  act: act,
   actionButton: actionButton,
+  menu: appMenu,
 }
 window.utils = {
   copy: copyToClipboard,
