@@ -5,7 +5,10 @@ section.share
       p #{share.info}
     .share__social.readable-width
       //- BEGIN: AddToAny
-      .a2a_kit.a2a_kit_size_32.a2a_default_style
+      .a2a_kit.a2a_kit_size_32.a2a_default_style(
+        data-a2a-url=share.shareUrl
+        data-a2a-title=share.shareTitle
+      )
         a.a2a_button_facebook.action-button.social.facebook
         a.a2a_button_twitter.action-button.social.twitter
         a.a2a_button_whatsapp.action-button.social.whatsapp
