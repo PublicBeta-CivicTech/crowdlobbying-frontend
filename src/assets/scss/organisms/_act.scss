@@ -23,11 +23,18 @@
   &.selected,
   &.selected:hover {
     color: $clr-white;
-    background-color: $clr-purple;
   }
   &:hover {
     color: shade($clr-red-dark, 15);
     background-color: shade($clr-grey-lighter, 5);
+  }
+}
+@each $clr in $clr-cards {
+  $clr-name: nth($clr, 1);
+  $clr-value: nth($clr, 2);
+  .act__message.selected[data-color='#{$clr-name}'],
+  .act__message.selected[data-color='#{$clr-name}']:hover {
+    background-color: #{$clr-value};
   }
 }
 
