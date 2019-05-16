@@ -3,4 +3,4 @@ section.campaign-info
     .campaign-info__content
       p.lead #{campaignInfo.lead}
       p #{campaignInfo.text}
-      p: a(onclick='scrollToElement(".faq", { offset: document.querySelector(".header").offsetHeight * -1 })') Mehr erfahren
+      p: a(onclick='utils.scrollTo(".faq", { offset: document.querySelector(".header").offsetHeight * -1 })') Mehr erfahren

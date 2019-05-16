@@ -9,6 +9,9 @@ let isEnabled = false
 // State: indicates whether menu is active.
 // 'Active' means: menu is visible or about to become visible.
 let isActive = false
+// Marker to store whether the header used class forceBgClass before the menu
+// was activated to be able to restore same state when menu is deactivated.
+let hadBg = false
 // Style: hide-animation duration in ms
 // NOTE: Value should correspond with animation duration in styles
 // s. ./src/assets/scss/organisms/_menu.scss
@@ -87,7 +90,11 @@ const _updateActiveState = activate => {
   menu && menu.classList[action](activeClass)
   // Toggle header state
   const header = document.getElementById('header')
-  header && header.classList[action](forceBgClass)
+  hadBg =
+    (activate && header && header.classList.contains(forceBgClass)) || hadBg
+  if (!hadBg) {
+    header && header.classList[action](forceBgClass)
+  }
 }
 
 export default { hide, init, toggle, keyListener }

@@ -1,0 +1,23 @@
+section.act
+  +stripe()
+    .act__richtext.richtext
+      h1 Wählen Sie eine Nachricht
+      p An: #[strong Jean-René Fournier] (CVP/VS) #[br]Betreff: E-ID
+    .act__select-message
+      each message, index in messages
+        blockquote.act__message(onclick='app.act.selectMessage()') #{message}
+    .act__form.richtext
+      h2 Absender
+      form(action='')
+        +mdcTextField('Vorname*')(class='act__input')
+        +mdcTextField('Nachname*')(class='act__input')
+        +mdcTextField('E-Mail*', 'email')(class='act__input')
+        +mdcTextField('Ort*')(class='act__input')
+        +mdcCheckbox('Ich möchte informiert bleiben lorem ipsum dolor')(class='act__input')
+        button.action-button.medium.act__button Abschicken
+    .act__legal.richtext
+      p
+        |Mit Ihrer Eingabe akzeptieren Sie unsere
+        |#[a(onclick='utils.scrollTo("#terms-of-use", { offset: document.querySelector(".header").offsetHeight * -1 })') Nutzungsbedingungen]
+        |sowie die
+        |#[a(onclick='utils.scrollTo("#privacy", { offset: document.querySelector(".header").offsetHeight * -1 })') Datenschutzbestimmungen].

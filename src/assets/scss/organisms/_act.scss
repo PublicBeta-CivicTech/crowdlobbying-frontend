@@ -1,0 +1,55 @@
+.act {
+  padding-top: map-get($header-height, 'default');
+}
+
+.act__message {
+  display: block;
+  min-height: 130px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-family: $font-slab;
+  // NOTE: font-size is not fluid
+  font-size: $font-size--slab-s;
+  line-height: $line-height--slab-s;
+  background-color: $clr-grey-lighter;
+  color: $clr-red-dark;
+  hyphens: auto;
+  box-shadow: 0 2px 4px 0 rgba($clr-black, 0.25);
+  transition: background-color $trans-duration $trans-cubic,
+    color $trans-duration $trans-cubic;
+  &:first-child {
+    margin-top: 0;
+  }
+  &.selected,
+  &.selected:hover {
+    color: $clr-white;
+    background-color: $clr-purple;
+  }
+  &:hover {
+    color: shade($clr-red-dark, 15);
+    background-color: shade($clr-grey-lighter, 5);
+  }
+}
+
+.act__input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.act__button {
+  margin-bottom: $vertical-space;
+}
+
+// Responsive
+
+@include mq($from: 'rat', $until: 'rabbit') {
+  .act {
+    padding-top: map-get($header-height, 'rat');
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .act {
+    padding-top: map-get($header-height, 'rabbit');
+  }
+}

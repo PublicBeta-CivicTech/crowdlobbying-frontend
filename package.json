@@ -1,6 +1,6 @@
 {
   "name": "crowd-lobbying-frontend",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "description": "Frontend for crowd-lobbying.ch.",
   "private": true,
   "main": "gulpfile.js",
@@ -24,7 +24,10 @@
     "browser-sync": "^2.24.7"
   },
   "dependencies": {
+    "@material/checkbox": "^2.1.1",
+    "@material/form-field": "^2.1.1",
     "@material/select": "^2.0.0",
+    "@material/textfield": "^2.1.1",
     "@pixelherz/js-utils": "^1.1.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",

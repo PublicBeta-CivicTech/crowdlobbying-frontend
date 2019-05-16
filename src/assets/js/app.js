@@ -1,22 +1,25 @@
 window.$ = window.jQuery = require('jquery')
 window.slick = require('slick-carousel')
 window._ = require('underscore')
-window.scrollToElement = require('scroll-to-element')
 
 import copyToClipboard from './utils/copy-to-clipboard'
+import { MDCTextField } from '@material/textfield'
 import { MDCSelect } from '@material/select'
 import { scrollOffset } from './utils/scroll'
-import appMenu from './modules/menu'
+import act from './modules/act'
 import actionButton from './modules/action-button'
+import appMenu from './modules/menu'
 import { signConsole } from '@pixelherz/js-utils/fun'
 
 // Global namespaces
 window.app = {
-  menu: appMenu,
+  act: act,
   actionButton: actionButton,
+  menu: appMenu,
 }
 window.utils = {
   copy: copyToClipboard,
+  scrollTo: require('scroll-to-element'),
 }
 
 // Console signature
@@ -26,6 +29,10 @@ signConsole(pkg)
 // MDCSelect
 document.querySelectorAll('.mdc-select').forEach(elm => {
   new MDCSelect(elm)
+})
+// MDCTextField
+document.querySelectorAll('.mdc-text-field').forEach(elm => {
+  new MDCTextField(elm)
 })
 
 // Hide main menu if esc key pressed

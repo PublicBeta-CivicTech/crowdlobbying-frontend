@@ -12,4 +12,7 @@ mixin official(name, party, state, count, image)
         span.official__state.with-us(title='mit uns') Stimmabsicht
       else
         span.official__state.unknown(title='unbekannt') Stimmabsicht
-      button.action-button.small.official__button(class=state > 0 ? 'visually-hidden' : '') Lobbyieren
+      a(href='/act.html')
+        button.action-button.small.official__button(
+          class=state > 0 ? 'visually-hidden' : ''
+        ) Lobbyieren

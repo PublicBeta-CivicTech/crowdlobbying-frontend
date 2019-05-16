@@ -1,0 +1,18 @@
+mixin mdcTextField(label, type = 'text')
+  .mdc-text-field.mdc-text-field--outlined(class!=attributes.class)
+    input#tf-outlined.mdc-text-field__input(type=type)
+    .mdc-notched-outline
+      .mdc-notched-outline__leading
+      .mdc-notched-outline__notch
+        label.mdc-floating-label(for='tf-outlined') #{label}
+      .mdc-notched-outline__trailing
+
+mixin mdcCheckbox(label)
+  .mdc-form-field(class!=attributes.class)
+    .mdc-checkbox
+      input.mdc-checkbox__native-control#checkbox-1(type='checkbox')
+      .mdc-checkbox__background
+        svg.mdc-checkbox__checkmark(viewBox='0 0 24 24')
+          path.mdc-checkbox__checkmark-path(fill='none', d='M1.73,12.91 8.1,19.28 22.79,4.59')
+        .mdc-checkbox__mixedmark
+    label(for='checkbox-1') #{label}
