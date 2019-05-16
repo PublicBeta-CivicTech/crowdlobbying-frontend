@@ -1,0 +1,30 @@
+include ../config
+include ../data
+block config
+include ../mixins/all
+block data
+
+doctype
+html(lang=lang)
+  head
+    include ../partials/head
+
+  body(class=template)
+
+    //- SVG sprite sheet
+    .visually-hidden
+      include ../../assets/icons/symbol/icons.svg
+
+    include ../partials/header
+    include ../partials/act-confirm
+    include ../partials/donorbox
+    include ../partials/share
+    include ../partials/scroll-to-top
+    include ../partials/footer
+    include ../partials/menu
+
+    script(async, src=path + 'assets/app.js')
+    script(async, src='https://static.addtoany.com/menu/page.js')
+    include ../partials/analytics
+
+    block content

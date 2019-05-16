@@ -1,0 +1,16 @@
+extends ../layout/act-confirm
+
+append config
+  - var title = "Campaign Title"
+  - var metaDesc = "Campaign Description"
+  - var template = 't-act-confirm'
+
+block data
+  -
+    var header = {
+      forceBg: true,
+    }
+
+block content
+  //
+    #{pkg.name} v.#{pkg.version}+722

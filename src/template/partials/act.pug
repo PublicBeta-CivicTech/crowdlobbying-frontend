@@ -1,14 +1,14 @@
 section.act
   +stripe()
-    .act__richtext.act__center-col.richtext
+    .act__richtext.act__center-col.center-text.richtext
       h1 Wählen Sie eine Nachricht
       p An: #[strong Jean-René Fournier] (CVP/VS) #[br]Betreff: E-ID
     .act__select-message
       each message, index in messages
         blockquote.act__message(onclick='app.act.selectMessage()') #{message}
-    .act__form.act__center-col.richtext
+    .act__form.act__center-col.center-text.richtext
       h2 Absender
-      form(action='')
+      form(action='/act-confirm.html')
         +mdcTextField('Vorname*')(class='act__input')
         +mdcTextField('Nachname*')(class='act__input')
         +mdcTextField('E-Mail*', 'email')(class='act__input')

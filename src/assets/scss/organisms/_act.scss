@@ -40,6 +40,13 @@
   margin-bottom: $vertical-space;
 }
 
+// Confirmation
+
+.act__my-message {
+  margin-top: $vertical-space;
+  margin-bottom: $vertical-space;
+}
+
 // Responsive
 
 @include mq($from: 'rat', $until: 'rabbit') {
@@ -66,9 +73,12 @@
   .act__center-col {
     margin-left: auto;
     margin-right: auto;
-    &.act__richtext h1,
-    &.act__form h2,
-    &.act__richtext p {
+  }
+
+  .act .center-text {
+    h1,
+    h2,
+    p {
       text-align: center;
     }
   }

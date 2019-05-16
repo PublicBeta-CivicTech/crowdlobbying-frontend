@@ -46,6 +46,7 @@ $clr-state-orange: #f0522b;
 $clr-state-red: $clr-red;
 
 // Social color
+$clr-email: #007ab9;
 $clr-facebook: #3b5998;
 $clr-twitter: #55acee;
 $clr-linkedin: #0077b5;
@@ -56,6 +57,7 @@ $clr-whatsapp: #25d366;
 
 // Workaround: Put all card colors in map to allow looping with @each
 $clr-social: (
+  email: $clr-email,
   facebook: $clr-facebook,
   twitter: $clr-twitter,
   whatsapp: $clr-whatsapp,
