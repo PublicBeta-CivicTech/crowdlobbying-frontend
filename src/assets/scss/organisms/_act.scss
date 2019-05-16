@@ -5,6 +5,8 @@
 .act__message {
   display: block;
   min-height: 130px;
+  height: 130px;
+  overflow-y: auto;
   padding: 10px 15px;
   margin-top: 10px;
   font-family: $font-slab;
@@ -14,12 +16,10 @@
   background-color: $clr-grey-lighter;
   color: $clr-red-dark;
   hyphens: auto;
+  cursor: pointer;
   box-shadow: 0 2px 4px 0 rgba($clr-black, 0.25);
   transition: background-color $trans-duration $trans-cubic,
     color $trans-duration $trans-cubic;
-  &:first-child {
-    margin-top: 0;
-  }
   &.selected,
   &.selected:hover {
     color: $clr-white;
@@ -51,5 +51,51 @@
 @include mq($from: 'rabbit') {
   .act {
     padding-top: map-get($header-height, 'rabbit');
+  }
+}
+
+@include mq($until: 'rat') {
+  .act__message {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@include mq($from: 'rat') {
+  .act__center-col {
+    margin-left: auto;
+    margin-right: auto;
+    &.act__richtext h1,
+    &.act__form h2,
+    &.act__richtext p {
+      text-align: center;
+    }
+  }
+
+  .act__select-message {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .act__message {
+    width: grid-width($cols: 4);
+    margin-right: grid-width($gutters: 1);
+    &:nth-child(3n + 0) {
+      margin-right: 0;
+    }
+  }
+}
+
+@include mq($from: 'rat', $until: 'rabbit') {
+  .act__center-col {
+    width: grid-width($cols: 8);
+  }
+}
+
+@include mq($from: 'rabbit') {
+  .act__center-col {
+    width: grid-width($cols: 4);
   }
 }
