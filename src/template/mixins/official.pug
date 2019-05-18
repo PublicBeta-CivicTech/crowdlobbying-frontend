@@ -1,7 +1,7 @@
 //- @param state: -1: against us, 0: unknown, 1: with us
 //- @param count: the string displayed in the badge
-mixin official(name, party, state, count, image)
-  section.official(class!=attributes.class)
+mixin official(name, party, state, count, image, index)
+  section.official(class!=attributes.class, data-region=(index % 2) + 1)
     div.official__portrait(style='background-image: url("' + image.url + '")')
       div.badge.official__badge #{count}
     div.official__footer

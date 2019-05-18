@@ -8,27 +8,32 @@ import { MDCSelect } from '@material/select'
 import { scrollOffset } from './utils/scroll'
 import act from './modules/act'
 import actionButton from './modules/action-button'
-import appMenu from './modules/menu'
+import menu from './modules/menu'
+import cantonChooser from './modules/canton-chooser'
 import { signConsole } from '@pixelherz/js-utils/fun'
 
 // Global namespaces
 window.app = {
-  act: act,
-  actionButton: actionButton,
-  menu: appMenu,
+  act,
+  actionButton,
+  cantonChooser,
+  menu,
 }
 window.utils = {
   copy: copyToClipboard,
   scrollTo: require('scroll-to-element'),
 }
-
 // Console signature
 signConsole(pkg)
 
 // MDC: Initialize material design components
 // MDCSelect
 document.querySelectorAll('.mdc-select').forEach(elm => {
-  new MDCSelect(elm)
+  const select = new MDCSelect(elm)
+  // Init canton chooser
+  if (elm.getAttribute('id') === 'canton-select') {
+    app.cantonChooser.init(select)
+  }
 })
 // MDCTextField
 document.querySelectorAll('.mdc-text-field').forEach(elm => {

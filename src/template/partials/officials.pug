@@ -1,7 +1,7 @@
 section.officials
   +stripe()
     .officials__canton-chooser
-      .mdc-select.mdc-select--outlined.officials__select
+      .mdc-select.mdc-select--outlined.officials__select#canton-select
         i.mdc-select__dropdown-icon
         select.mdc-select__native-control
           option(value, disabled, selected)
@@ -12,14 +12,17 @@ section.officials
           .mdc-notched-outline__notch
             label.mdc-floating-label Kanton wählen
           .mdc-notched-outline__trailing
+    //- NOTE: Class 'officials__list' is used by script and style
+    //- s. ./src/assets/js/modules/canton-chooser.js
     .officials__list
-      each official in officials
+      each official, index in officials
         +official(
           official.name,
           official.party,
           official.state,
           official.count,
-          official.image
+          official.image,
+          index
         )(class='officials__card')
     .officials__explanation.readable-width
       h2.officials__title Lobby-Status
