@@ -40,9 +40,6 @@ document.querySelectorAll('.mdc-text-field').forEach(elm => {
   new MDCTextField(elm)
 })
 
-// Hide main menu if esc key pressed
-document.addEventListener('keyup', app.menu.keyListener)
-
 // Global scroll handler
 const scrollHandler = _.throttle(() => {
   const action = scrollOffset().y > 50 ? 'add' : 'remove'

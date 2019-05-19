@@ -29,6 +29,8 @@ const forceBgClass = 'force-background'
 // Initialize menu
 const init = () => {
   _stateCtrl(false)
+  // Hide main menu if esc key pressed
+  document && document.addEventListener('keyup', app.menu.keyListener)
 }
 
 // Toggle menu state (active|inactive)
