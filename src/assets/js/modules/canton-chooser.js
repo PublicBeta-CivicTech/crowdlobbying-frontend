@@ -1,3 +1,5 @@
+import nodeListToArray from '../utils/nodelist-to-array'
+
 // The select element (type MDCSelect)
 // s. https://material.io/develop/web/components/input-controls/select-menus/
 let cantonSelect = null
@@ -23,7 +25,7 @@ const init = select => {
 const _cloneCards = () => {
   const cardsNode = document.querySelector(`.${classWrapper}`)
   cardsNode &&
-    cardsNode.childNodes.forEach(node => {
+    nodeListToArray(cardsNode.childNodes).forEach(node => {
       if (node.nodeType === 1) {
         cardElms.push(node)
       }

@@ -33,6 +33,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "del": "^3.0.0",
+    "element-closest": "^3.0.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cache": "^1.0.2",

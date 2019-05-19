@@ -2,7 +2,9 @@ window.$ = window.jQuery = require('jquery')
 window.slick = require('slick-carousel')
 window._ = require('underscore')
 
+import elementClosest from 'element-closest'
 import copyToClipboard from './utils/copy-to-clipboard'
+import nodeListToArray from './utils/nodelist-to-array'
 import { MDCTextField } from '@material/textfield'
 import { MDCSelect } from '@material/select'
 import { scrollOffset } from './utils/scroll'
@@ -11,6 +13,9 @@ import actionButton from './modules/action-button'
 import menu from './modules/menu'
 import cantonChooser from './modules/canton-chooser'
 import { signConsole } from '@pixelherz/js-utils/fun'
+
+// Polyfill
+elementClosest(window)
 
 // Global namespaces
 window.app = {
@@ -28,7 +33,7 @@ signConsole(pkg)
 
 // MDC: Initialize material design components
 // MDCSelect
-document.querySelectorAll('.mdc-select').forEach(elm => {
+nodeListToArray(document.querySelectorAll('.mdc-select')).forEach(elm => {
   const select = new MDCSelect(elm)
   // Init canton chooser
   if (elm.getAttribute('id') === 'canton-select') {
@@ -36,7 +41,7 @@ document.querySelectorAll('.mdc-select').forEach(elm => {
   }
 })
 // MDCTextField
-document.querySelectorAll('.mdc-text-field').forEach(elm => {
+nodeListToArray(document.querySelectorAll('.mdc-text-field')).forEach(elm => {
   new MDCTextField(elm)
 })
 
