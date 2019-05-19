@@ -5,7 +5,7 @@ section.act
       p An: #[strong Jean-René Fournier] (CVP/VS) #[br]Betreff: E-ID
     .act__select-message
       each message, index in messages
-        blockquote.act__message(onclick='app.act.selectMessage()') #{message}
+        blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
     .act__center-col.center-text.richtext
       h2 Absender
       form(action='/act-confirm.html').act__form
@@ -15,6 +15,8 @@ section.act
         +mdcTextField('Ort*')(class='act__input')
         +mdcCheckbox('Ich möchte informiert bleiben lorem ipsum dolor')(class='act__input')
         input(type='hidden' name='color' id='card-color')
+        input(type='hidden' name='argument-index' id='argument-index')
+        input(type='hidden' name='argument-string' id='argument-string')
         button.action-button.medium.act__button Abschicken
     .act__legal.act__center-col.richtext
       p

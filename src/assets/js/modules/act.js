@@ -2,10 +2,16 @@ import { randItem } from '@pixelherz/js-utils/array'
 
 // Name of class 'selected'
 const seletedClass = 'selected'
-// Id of the forms color field (hidden input)
+// Id of the form's color field (hidden input)
 const colorId = 'card-color'
+// Id of the form's argument index field (hidden input)
+const argumentIndexId = 'argument-index'
+// Id of the form's argument string field (hidden input)
+const argumentStringId = 'argument-string'
 // Name of color attribute
 const colorAttr = 'data-color'
+// Name of argument index attribute
+const indexAttr = 'data-index'
 // List of selected colors
 const colors = [
   'pink',
@@ -26,6 +32,7 @@ let selectedMessageElm = null
 const selectMessage = e => {
   e = e || window.event
   const elm = e && e.target && e.target.closest('.act__message')
+  const str = elm && elm.innerText
   if (selectedMessageElm === elm) {
     _unselectMessage(elm)
   } else {
@@ -37,16 +44,20 @@ const selectMessage = e => {
 // Select message
 const _selectMessage = elm => {
   selectedMessageElm = elm
+  // Get the card's message string
+  const messageString = elm && elm.innerText
+  // Get the message index if available
+  const messageIndex = parseInt(elm && elm.getAttribute(indexAttr))
   // Get the card's color if available
   const color = (elm && elm.getAttribute(colorAttr)) || _initColor(elm)
-  _setColor(color)
+  _updateForm(messageIndex, messageString, color)
   elm.classList.add(seletedClass)
 }
 
 // Unselect message
 const _unselectMessage = elm => {
   selectedMessageElm = null
-  _setColor('')
+  _updateForm()
   elm && elm.classList.remove(seletedClass)
 }
 
@@ -57,10 +68,17 @@ const _initColor = elm => {
   return color
 }
 
-// Update the forms color field
-const _setColor = color => {
-  const formField = document && document.querySelector(`#${colorId}`)
-  formField && formField.setAttribute('value', color)
+// Update the hidden fields of the form
+const _updateForm = (argumentIndex = '', argumentString = '', color = '') => {
+  const argumentIndexField =
+    document && document.querySelector(`#${argumentIndexId}`)
+  argumentIndexField && argumentIndexField.setAttribute('value', argumentIndex)
+  const argumentStringField =
+    document && document.querySelector(`#${argumentStringId}`)
+  argumentStringField &&
+    argumentStringField.setAttribute('value', argumentString)
+  const colorField = document && document.querySelector(`#${colorId}`)
+  colorField && colorField.setAttribute('value', color)
 }
 
 export default { selectMessage }
