@@ -46,6 +46,49 @@ Wie im Backend-Prototyp habe ich im Frontend das [Slick-Carousel](https://kenwhe
 
 Das [Slick-Carousel](https://kenwheeler.github.io/slick/) hat [jQuery](https://jquery.com/) als Dependency. Davon abgesehen verzichte ich auf jQuery (weniger Dependencies, einfachere Migration). 
 
+### AddToAny (Sharing)
+
+Sharing (Facebook, Twitter, WhatsApp und E-Mail) ist via [AddToAny](https://www.addtoany.com/) implementiert. Der Content lässt sich via die `data-a2a-[…]`-Attributes und die globale Variable `a2a_config` anpassen. 
+
+#### AddToAny Docs
+
+- [URL & Title to Share](https://www.addtoany.com/buttons/customize/page_url_title)
+- [AddToAny: Templates & Endpoint Parameters](https://www.addtoany.com/buttons/customize/templates)
+
+#### Implementation
+
+./src/template/partials/share.pug
+```pug
+//- BEGIN: AddToAny
+.a2a_kit.a2a_kit_size_32.a2a_default_style(
+  data-a2a-url=share.shareUrl
+  data-a2a-title=share.shareTitle
+)
+  a.a2a_button_facebook.action-button.social.facebook
+  a.a2a_button_twitter.action-button.social.twitter
+  a.a2a_button_whatsapp.action-button.social.whatsapp
+  a.a2a_button_email.action-button.social.email
+//- END: AddToAny
+```
+
+./src/assets/js/app.js
+```js
+  // Customize AddToAny templates
+  a2a_config.templates.facebook = {
+    quote: 'Wir wollen keinen … ${link}',
+  }
+  a2a_config.templates.twitter = {
+    text: 'Wir wollen keinen … ${link}',
+  }
+  a2a_config.templates.whatsapp = {
+    text: 'Wir wollen keinen … ${link}',
+  }
+  a2a_config.templates.email = {
+    body: 'Wir wollen keinen … ${link}',
+  }
+```
+
+
 ## Contact
 
 Pixelherz  
