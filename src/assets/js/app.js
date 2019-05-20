@@ -66,4 +66,22 @@ $(document).ready(() => {
       slidesToShow: 5,
     })
     .addClass('is-ready')
+
+  // Customize AddToAny templates
+  a2a_config.templates.facebook = {
+    quote:
+      'Wir wollen keinen digitalen Pass (E-ID) von der UBS, Swisscom oder der CSS Versicherung! ${link}',
+  }
+  a2a_config.templates.twitter = {
+    text:
+      'Wir wollen keinen digitalen Pass (E-ID) von der UBS, Swisscom oder der CSS Versicherung! ${link}',
+  }
+  a2a_config.templates.whatsapp = {
+    text:
+      'Wir wollen keinen digitalen Pass (E-ID) von der UBS, Swisscom oder der CSS Versicherung! ${link}',
+  }
+  a2a_config.templates.email = {
+    body:
+      'Wir wollen keinen digitalen Pass (E-ID) von der UBS, Swisscom oder der CSS Versicherung! ${link}',
+  }
 })
