@@ -1,6 +1,6 @@
 # Crowd Lobbying, Frontend Pilot
 
-Frontend for of crowd-lobbying.ch. Based on Hello Front Boilerplate (docs see below). 
+Frontend for of crowdlobbying.ch. Based on Hello Front Boilerplate (docs see below). 
 
 
 ## Installation
