@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const config = require("../config");
 const browserSync = require("browser-sync");
 const watch = require("gulp-watch");
-const runSequence = require("run-sequence");
+const runSequence = require('gulp4-run-sequence');
 
 gulp.task("watch", () => {
   watch(config.styles.files_src, "./src/assets", function() {
