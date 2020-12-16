@@ -23,7 +23,7 @@ function revreplaceTask() {
     .src(config.dist + "/**/*.html")
     .pipe(revReplace({ manifest: manifest }))
     .pipe(gulp.dest(config.dist));
-};
+}
 
 exports.rev = revTask;
 exports.revreplace = revreplaceTask
