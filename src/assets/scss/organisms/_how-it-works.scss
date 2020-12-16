@@ -1,5 +1,8 @@
+@import "../config/colors";
+
 .how-it-works {
   padding: $vertical-space * 2 0;
+  background-color: $clr-grey-lighter;
 }
 
 .how-it-works__title {

@@ -13,7 +13,7 @@
   // NOTE: font-size is not fluid
   font-size: $font-size--slab-s;
   line-height: $line-height--slab-s;
-  background-color: $clr-grey-lighter;
+  background-color: $clr-white;
   color: $clr-red-dark;
   hyphens: auto;
   cursor: pointer;
@@ -45,6 +45,7 @@
 .act__input {
   width: 100%;
   margin-bottom: 10px;
+  background-color: $clr-white !important;
 }
 
 .act__button {

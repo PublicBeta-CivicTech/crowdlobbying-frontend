@@ -1,0 +1,7 @@
+@import '../config/_colors.scss';
+
+body {
+  &.t-act {
+    background-color: $clr-grey-lighter;
+  }
+}

@@ -4,6 +4,7 @@
 
 .officials__select {
   width: 100%;
+  background-color: $clr-white !important;
 }
 
 .officials__list {
@@ -49,6 +50,7 @@
 
 @include mq($from: 'mouse') {
   .officials {
+    background-color: $clr-grey-lighter;
     padding-bottom: grid-width($gutters: 1) / 2;
     padding-top: grid-width($gutters: 1) / 2;
   }

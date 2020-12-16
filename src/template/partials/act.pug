@@ -2,7 +2,8 @@ section.act
   +stripe()
     .act__richtext.act__center-col.center-text.richtext
       h1 Wählen Sie eine Nachricht
-      p An: #[strong Jean-René Fournier] (CVP/VS) #[br]Betreff: E-ID
+      img(src='/assets/officials/Jean-René Fournier.jpg')
+      p An: #[strong Jean-Rene Fournier] (CVP/VS) #[br]Betreff: E-ID
     .act__select-message
       each message, index in messages
         blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
