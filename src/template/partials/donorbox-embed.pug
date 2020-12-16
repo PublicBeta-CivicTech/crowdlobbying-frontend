@@ -1,14 +1,21 @@
-//- DE: https://donorbox.org/embed/crowdlobbying-digitaler-pass
-//- FR: https://donorbox.org/embed/crowd-lobbying-digitaler-pass-2-2
-script(src='https://donorbox.org/widget.js', paypalexpress='false', defer)
-iframe.donorbox__iframe(
-    src='https://donorbox.org/embed/crowdlobbying-digitaler-pass',
-    height='685px',
-    width='100%',
-    style='min-width:310px; max-height:none!important',
-    seamless,
-    name='donorbox',
-    frameborder='0',
-    scrolling='no',
-    allowpaymentrequest
-  )
+div.rnw-widget-container
+  script(src='https://tamaro.raisenow.com/wecol-b933/latest/widget.js')
+  script.
+    window.rnw.tamaro.runWidget('.rnw-widget-container', {
+      language: 'de',
+      testMode: false,
+      amounts: [20,40,80,120],
+      purposes: ["P1004-3"],
+      translations: {
+        de: {
+          purposes: {
+            "P1004-3": "Stimmrechtsalter 16"
+          }
+        },
+        fr: {
+          purposes: {
+            "P1004-3": "Le droit de vote à 16 ans"
+          }
+        }
+      }
+    })
