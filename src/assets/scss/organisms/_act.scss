@@ -97,10 +97,11 @@
   .act__select-message {
     display: flex;
     align-items: flex-start;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .act__message {
+    width: grid-width($cols: 4);
     margin-right: grid-width($gutters: 1);
     &:nth-child(3n + 0) {
       margin-right: 0;
