@@ -4,7 +4,7 @@ const rev = require("gulp-rev");
 const revdel = require("gulp-rev-delete-original");
 const revReplace = require("gulp-rev-replace");
 
-gulp.task("rev", () => {
+function revTask() {
   console.log([config.assets_dist + "/**.css", config.assets_dist + "/**.js"]);
   return gulp
     .src([config.assets_dist + "/**.css", config.assets_dist + "/**.js"], {
@@ -15,12 +15,15 @@ gulp.task("rev", () => {
     .pipe(gulp.dest(config.assets_dist))
     .pipe(rev.manifest())
     .pipe(gulp.dest(config.assets_dist));
-});
+}
 
-gulp.task("revreplace", () => {
+function revreplaceTask() {
   const manifest = gulp.src(config.assets_dist + "/rev-manifest.json");
   return gulp
     .src(config.dist + "/**/*.html")
     .pipe(revReplace({ manifest: manifest }))
     .pipe(gulp.dest(config.dist));
-});
+};
+
+exports.rev = revTask;
+exports.revreplace = revreplaceTask

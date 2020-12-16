@@ -32,7 +32,7 @@ const webpackChangeHandler = (_, stats) => {
   browserSync.reload();
 };
 
-gulp.task("scripts", () => {
+function scripts() {
   if (process.WATCH_SCRIPTS) webpackConfig.watch = true;
 
   const webpackStream = gulp
@@ -49,4 +49,6 @@ gulp.task("scripts", () => {
   if (!process.WATCH_SCRIPTS) {
     return webpackStream; // return the stream if scripts watch is disabled to properly finish the script tasks
   }
-});
+}
+
+exports.scripts = scripts;

@@ -5,7 +5,7 @@ const imagemin = require("gulp-imagemin");
 const svgSprite = require("gulp-svg-sprite");
 const rename = require("gulp-rename");
 
-gulp.task("icons", () => {
+function icons() {
   if (utils.checkDirectoryForExt(config.dir, ".svg")) {
     return gulp
       .src(config.src_files)
@@ -38,4 +38,6 @@ gulp.task("icons", () => {
     console.info(
       "Icon source folder is empty, skipping svg sprite icon creation"
     );
-});
+}
+
+exports.icons = icons;
