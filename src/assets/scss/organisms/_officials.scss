@@ -64,7 +64,7 @@
   }
 }
 
-@include mq($from: 'mouse', $until: 'rat') {
+@include mq($from: 'mouse', $until: 'rabbit') {
   .officials__card {
     width: grid-width($cols: 6);
     &:nth-child(2n + 1) {
@@ -73,7 +73,7 @@
   }
 }
 
-@include mq($from: 'rat') {
+@include mq($from: 'rabbit') {
   .officials__select {
     width: grid-width($cols: 4);
   }
