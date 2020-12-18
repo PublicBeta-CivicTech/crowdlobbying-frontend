@@ -1,3 +1,5 @@
+@import '../config/colors';
+
 .officials__canton-chooser {
   text-align: center;
 }
@@ -17,6 +19,7 @@
 .officials__card {
   margin-bottom: 5px;
   margin-top: 5px;
+  background-color: $clr-white;
 }
 
 .officials__explanation {
