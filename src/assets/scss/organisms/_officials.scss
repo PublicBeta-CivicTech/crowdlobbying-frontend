@@ -1,5 +1,9 @@
 @import '../config/colors';
 
+.officials {
+  background-color: $clr-grey-lighter;
+}
+
 .officials__canton-chooser {
   text-align: center;
 }
@@ -53,7 +57,6 @@
 
 @include mq($from: 'mouse') {
   .officials {
-    background-color: $clr-grey-lighter;
     padding-bottom: grid-width($gutters: 1) / 2;
     padding-top: grid-width($gutters: 1) / 2;
   }
