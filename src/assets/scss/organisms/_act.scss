@@ -48,6 +48,18 @@
   background-color: $clr-white !important;
 }
 
+.act__checkbox {
+  background-color: transparent !important;
+
+  .mdc-checkbox__background {
+    background-color: $clr-white !important;
+
+    .mdc-checkbox__checkmark {
+      color: var(--mdc-theme-secondary, #018786);
+    }
+  }
+}
+
 .act__button {
   margin-bottom: $vertical-space;
 }
