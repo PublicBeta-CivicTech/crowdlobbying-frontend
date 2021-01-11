@@ -48,6 +48,10 @@
   background-color: $clr-white !important;
 }
 
+.act__textarea {
+  min-height: 130px;
+}
+
 .act__checkbox {
   background-color: transparent !important;
 
@@ -62,6 +66,24 @@
 
 .act__button {
   margin-bottom: $vertical-space;
+}
+
+.act__custom-message {
+  margin-top: 20px;
+  text-align: center;
+
+  &--toggler {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .act__textarea {
+    display: none;
+
+    &--visible {
+      display: inline-flex;
+    }
+  }
 }
 
 // Confirmation
