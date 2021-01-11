@@ -6,13 +6,24 @@
 
 .official__portrait {
   position: relative;
-  padding-bottom: 217 / 300 * 100%;
+  width: 120 / 300 * 100%;
+  height: 100%;
+  min-height: 160px;
+  float: left;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .official__footer {
-  padding: 15px;
+  height: 100%;
+  min-height: 160px;
+  position: relative;
+  padding: 10px 5px 10px 0;
+  margin-left: 130 / 300 * 100%;
+
+  a {
+    display: block;
+  }
 }
 
 .official__badge {
@@ -24,7 +35,6 @@
 .official__name,
 .official__state {
   display: block;
-  white-space: nowrap;
   // Static font-size, no fluid-type
   font-size: map-get($font-size, 's');
   line-height: map-get($line-height, 's');
@@ -32,9 +42,10 @@
 
 .official__state {
   @include state-badge();
+  padding-bottom: 53px;
 }
 
 .official__button {
-  margin-top: 10px;
-  margin-bottom: 3px;
+  position: absolute;
+  bottom: 10px;
 }

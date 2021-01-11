@@ -1,0 +1,25 @@
+.donorbox {
+  padding: 40px 0;
+
+  .rnw-widget-container {
+    #tamaro-widget {
+      &.tamaro-widget {
+        background-color: transparent;
+
+        .label-checkbox-block,
+        .label-radio-block,
+        .payment-method,
+        .field-block {
+          background-color: $clr-white !important;
+        }
+
+        .input-text,
+        .input-select,
+        .label-block,
+        .input-textarea {
+          padding-left: 1.25rem;
+        }
+      }
+    }
+  }
+}
