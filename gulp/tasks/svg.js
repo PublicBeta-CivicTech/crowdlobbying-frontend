@@ -5,7 +5,7 @@ const size = require("gulp-size");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 
-gulp.task("svg", () => {
+function svg() {
   return gulp
     .src(config.files_src)
     .pipe(
@@ -31,4 +31,6 @@ gulp.task("svg", () => {
       })
     )
     .pipe(gulp.dest(config.dist));
-});
+}
+
+exports.svg = svg;

@@ -1,12 +1,13 @@
-const gulp = require("gulp");
 const config = require("../config").browserSync;
 const browserSync = require("browser-sync");
-const reload = browserSync.reload;
 
-gulp.task("browserSync", () => {
-  browserSync(config);
-});
+function browserSyncTask() {
+  return browserSync(config);
+}
 
-gulp.task("browserSync-reload", () => {
-  browserSync.reload();
-});
+function browserSyncReloadTask() {
+  return browserSync.reload();
+}
+
+exports.browserSync = browserSyncTask;
+exports.browserSyncReload = browserSyncReloadTask;

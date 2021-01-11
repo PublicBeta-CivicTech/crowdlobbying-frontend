@@ -1,27 +1,23 @@
 const gulp = require("gulp");
 const config = require("../config");
-const browserSync = require("browser-sync");
 const watch = require("gulp-watch");
-const runSequence = require("run-sequence");
 
-gulp.task("watch", () => {
-  watch(config.styles.files_src, "./src/assets", function() {
-    runSequence("styles");
-  });
+const { styles } = require('./styles');
+const { images } = require('./images');
+const { browserSyncReload } = require('./browserSync');
+const { icons } = require('./icons');
+const { templates } = require('./templates');
+const { fonts } = require('./fonts');
+const { cacheClear } = require('./cacheClear');
 
-  watch(config.images.files_src, () => {
-    runSequence("images", browserSync.reload);
-  });
+function watchTask(cb) {
+  watch(config.styles.files_src, "./src/assets", gulp.series(styles));
+  watch(config.images.files_src, gulp.series(images, browserSyncReload));
+  watch(config.icons.src_files, gulp.series(icons, templates, browserSyncReload));
+  watch(config.templates.files_src, gulp.series(cacheClear, templates, browserSyncReload));
+  watch(config.fonts.src, gulp.series(fonts, browserSyncReload));
 
-  watch(config.icons.src_files, () => {
-    runSequence("icons", "templates", browserSync.reload);
-  });
+  cb();
+}
 
-  watch(config.templates.files_src, () => {
-    runSequence("templates", browserSync.reload);
-  });
-
-  watch(config.fonts.src, () => {
-    runSequence("fonts", browserSync.reload);
-  });
-});
+exports.watch = watchTask;

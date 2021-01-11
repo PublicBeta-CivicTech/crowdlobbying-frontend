@@ -1,9 +1,16 @@
 const gulp = require("gulp");
-const config = require("../config");
-const browserSync = require("browser-sync");
-const runSequence = require("run-sequence");
+const process = require("process");
 
-gulp.task("default", callback => {
+const { build } = require('./build');
+const { browserSync, browserSyncReload } = require('./browserSync');
+const { watch } = require('./watch');
+
+function defaultTask(cb) {
   process.WATCH_SCRIPTS = true;
-  runSequence("build", "browserSync", "watch", callback);
-});
+
+  gulp.parallel(build, browserSync, browserSyncReload, watch)();
+
+  cb();
+}
+
+exports.defaultTask = defaultTask;

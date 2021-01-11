@@ -23,7 +23,7 @@ const filters = {
   },
 }
 
-gulp.task('templates', () => {
+function templates() {
   return gulp
     .src(config.page_src)
     .pipe(
@@ -42,4 +42,6 @@ gulp.task('templates', () => {
     )
     .pipe(size({ title: 'template' }))
     .pipe(gulp.dest(config.dist))
-})
+}
+
+exports.templates = templates;

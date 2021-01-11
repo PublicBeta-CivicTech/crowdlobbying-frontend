@@ -23,7 +23,7 @@ module.exports = {
 
   scripts: {
     files_src: src + '/assets/js/**/*.js',
-    main_src: src + '/assets/js/main.js',
+    main_src: src + '/assets/js/app.js',
     main_name: 'main.js',
     dist: assets_dist,
   },

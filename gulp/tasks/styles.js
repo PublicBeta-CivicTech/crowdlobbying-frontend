@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 const config = require('../config')
-const fs = require('fs')
 const sass = require('gulp-sass')
 const plumber = require('gulp-plumber')
 const autoprefixer = require('gulp-autoprefixer')
@@ -11,7 +10,7 @@ const size = require('gulp-size')
 const cssnano = require('gulp-cssnano')
 const options = require('minimist')(process.argv.slice(2))
 
-gulp.task('styles', () => {
+function styles() {
   return gulp
     .src(config.styles.files_src)
     .pipe(
@@ -35,4 +34,6 @@ gulp.task('styles', () => {
     .pipe(options.production ? cssnano() : gutil.noop())
     .pipe(size({ title: 'style' }))
     .pipe(gulp.dest(config.styles.dist))
-})
+}
+
+exports.styles = styles;

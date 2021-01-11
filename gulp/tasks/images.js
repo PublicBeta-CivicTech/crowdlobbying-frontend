@@ -5,7 +5,7 @@ const size = require("gulp-size");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
 
-gulp.task("images", () => {
+function images() {
   return gulp
     .src(config.files_src)
     .pipe(
@@ -34,4 +34,6 @@ gulp.task("images", () => {
       })
     )
     .pipe(gulp.dest(config.dist));
-});
+}
+
+exports.images = images;

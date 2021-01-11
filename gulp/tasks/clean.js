@@ -1,5 +1,12 @@
-const gulp = require("gulp");
+const gulp = require('gulp');
 const del = require("del");
 const config = require("../config");
+const { cacheClear } = require('./cacheClear');
 
-gulp.task("clean", del.bind(null, [config.dist]));
+function clean(cb) {
+  gulp.series(cacheClear)(cb);
+
+  return del([config.dist]);
+}
+
+exports.clean = clean;
