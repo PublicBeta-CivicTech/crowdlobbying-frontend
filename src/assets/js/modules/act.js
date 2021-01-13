@@ -81,4 +81,14 @@ const _updateForm = (argumentIndex = '', argumentString = '', color = '') => {
   colorField && colorField.setAttribute('value', color)
 }
 
-export default { selectMessage }
+const addCustomMessage = e => {
+  e = e || window.event
+  const elm = e && e.target && e.target.closest('a')
+  const target = elm.nextElementSibling;
+
+  if (target) {
+    target.classList.toggle('act__textarea--visible');
+  }
+}
+
+export default { selectMessage, addCustomMessage }
