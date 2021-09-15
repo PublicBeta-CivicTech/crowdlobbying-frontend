@@ -20,8 +20,17 @@
   }
   &.center-text {
     text-align: center;
+
+    .left-text * {
+      text-align: left;
+    }
   }
   .no-space-top {
     margin-top: 0;
+  }
+
+  .small p {
+    font-size: map-get($font-size, 'xs');
+    line-height: map-get($line-height, 'xs');
   }
 }
