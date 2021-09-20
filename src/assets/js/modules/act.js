@@ -52,6 +52,9 @@ const _selectMessage = elm => {
   const color = (elm && elm.getAttribute(colorAttr)) || _initColor(elm)
   _updateForm(messageIndex, messageString, color)
   elm.classList.add(seletedClass)
+
+  document.querySelector('.act__textarea--visible').classList.remove('act__textarea--visible');
+  document.querySelector('.act__custom-message--toggler-hidden').classList.remove('act__custom-message--toggler-hidden')
 }
 
 // Unselect message
@@ -84,6 +87,10 @@ const _updateForm = (argumentIndex = '', argumentString = '', color = '') => {
 const addCustomMessage = () => {
   const toggler = document.querySelector('.act__custom-message--toggler');
   toggler.classList.toggle('act__custom-message--toggler-hidden');
+
+  document.querySelectorAll('.act__message').forEach(message => {
+    _unselectMessage(message)
+  });
 
   const target = toggler.closest('a').nextElementSibling;
 
