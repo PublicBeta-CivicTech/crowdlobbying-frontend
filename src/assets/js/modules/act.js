@@ -81,10 +81,11 @@ const _updateForm = (argumentIndex = '', argumentString = '', color = '') => {
   colorField && colorField.setAttribute('value', color)
 }
 
-const addCustomMessage = e => {
-  e = e || window.event
-  const elm = e && e.target && e.target.closest('a')
-  const target = elm.nextElementSibling;
+const addCustomMessage = () => {
+  const toggler = document.querySelector('.act__custom-message--toggler');
+  toggler.classList.toggle('act__custom-message--toggler-hidden');
+
+  const target = toggler.closest('a').nextElementSibling;
 
   if (target) {
     target.classList.toggle('act__textarea--visible');

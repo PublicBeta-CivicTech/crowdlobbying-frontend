@@ -8,8 +8,8 @@ section.act
       each message, index in messages
         blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
     .act__custom-message.act__center-col
-      a(href='#', class='act__custom-message--toggler', onclick='app.act.addCustomMessage(); return false;') Eigene Nachricht erfassen
-      +mdcTextArea('Argument', 100)(class='act__input act__textarea')
+      a(href='#', class='act__custom-message--toggler', onclick='app.act.addCustomMessage(); return false;') ✍️ Eigene Nachricht...
+      +mdcTextArea('Meine Nachricht...', 100)(class='act__input act__textarea')
     .act__center-col.center-text.richtext
       h2 Absender
       form(action='/act-confirm.html').act__form
