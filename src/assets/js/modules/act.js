@@ -1,4 +1,4 @@
-import { randItem } from '@pixelherz/js-utils/array'
+import {randItem} from '@pixelherz/js-utils/array'
 
 // Name of class 'selected'
 const seletedClass = 'selected'
@@ -53,8 +53,23 @@ const _selectMessage = elm => {
   _updateForm(messageIndex, messageString, color)
   elm.classList.add(seletedClass)
 
-  document.querySelector('.act__textarea--visible').classList.remove('act__textarea--visible');
-  document.querySelector('.act__custom-message--toggler-hidden').classList.remove('act__custom-message--toggler-hidden')
+  const visibleTextarea = document.querySelector('.act__textarea--visible');
+
+  if(visibleTextarea) {
+    visibleTextarea.classList.remove('act__textarea--visible');
+  }
+  const hiddenButton = document.querySelector('.act__custom-message--toggler-hidden');
+
+  if(hiddenButton) {
+    hiddenButton.classList.remove('act__custom-message--toggler-hidden');
+  }
+
+  const textarea = document.querySelector('.act__textarea textarea');
+
+  if(textarea.value !== '') {
+    textarea.dataset.text = textarea.value;
+    textarea.value = '';
+  }
 }
 
 // Unselect message
@@ -79,14 +94,23 @@ const _updateForm = (argumentIndex = '', argumentString = '', color = '') => {
   const argumentStringField =
     document && document.querySelector(`#${argumentStringId}`)
   argumentStringField &&
-    argumentStringField.setAttribute('value', argumentString)
+  argumentStringField.setAttribute('value', argumentString)
   const colorField = document && document.querySelector(`#${colorId}`)
   colorField && colorField.setAttribute('value', color)
 }
 
 const addCustomMessage = () => {
   const toggler = document.querySelector('.act__custom-message--toggler');
-  toggler.classList.toggle('act__custom-message--toggler-hidden');
+  const textarea = document.querySelector('.act__textarea textarea');
+
+  if (toggler.classList.contains('act__custom-message--toggler-hidden')) {
+    textarea.dataset.text = textarea.value;
+    textarea.value = '';
+    toggler.classList.remove('act__custom-message--toggler-hidden');
+  } else {
+    textarea.value = textarea.dataset.text || '';
+    toggler.classList.add('act__custom-message--toggler-hidden');
+  }
 
   document.querySelectorAll('.act__message').forEach(message => {
     _unselectMessage(message)
@@ -99,4 +123,4 @@ const addCustomMessage = () => {
   }
 }
 
-export default { selectMessage, addCustomMessage }
+export default {selectMessage, addCustomMessage}
