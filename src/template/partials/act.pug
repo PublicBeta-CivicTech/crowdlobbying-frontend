@@ -4,16 +4,16 @@ section.act
       h1 Wählen Sie eine Nachricht
       img(src='/assets/officials/Jean-René Fournier.jpg')
       p An: #[strong Jean-Rene Fournier] (CVP/VS) #[br]Betreff: E-ID
-    .act__select-message
-      each message, index in messages
-        input(type='radio' name='argument' id='argument-'+index value=index style='visibility: hidden;')
-        blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
-    .act__custom-message.act__center-col
-      a(href='#', class='act__custom-message--toggler', onclick='app.act.addCustomMessage(); return false;') ✍️ Eigene Nachricht...
-      +mdcTextArea('Meine Nachricht...', 100)(class='act__input act__textarea')
-    .act__center-col.center-text.richtext
-      h2 Absender
-      form(action='/act-confirm.html').act__form
+    form(action='/act-confirm.html').act__form
+      .act__select-message
+        each message, index in messages
+          input(type='radio' name='argument' id='argument-'+index value=index style='visibility: hidden;')
+          blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
+      .act__custom-message.act__center-col
+        a(href='#', class='act__custom-message--toggler', onclick='app.act.addCustomMessage(); return false;') ✍️ Eigene Nachricht...
+        +mdcTextArea('Meine Nachricht...', 100)(class='act__input act__textarea')
+      .act__center-col.center-text.richtext
+        h2 Absender
         +mdcTextField('Vorname*')(class='act__input')
         +mdcTextField('Nachname*')(class='act__input')
         +mdcTextField('E-Mail*', 'email')(class='act__input')
