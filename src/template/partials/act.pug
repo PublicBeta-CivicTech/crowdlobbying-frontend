@@ -6,6 +6,7 @@ section.act
       p An: #[strong Jean-Rene Fournier] (CVP/VS) #[br]Betreff: E-ID
     .act__select-message
       each message, index in messages
+        input(type='radio' name='argument' id='argument-'+index value=index style='visibility: hidden;')
         blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
     .act__custom-message.act__center-col
       a(href='#', class='act__custom-message--toggler', onclick='app.act.addCustomMessage(); return false;') ✍️ Eigene Nachricht...
@@ -23,8 +24,6 @@ section.act
         +mdcCheckbox('Diese Initiative')(class='act__input act__checkbox')
         +mdcCheckbox('Projekte von Crowd Lobbying')(class='act__input act__checkbox')
         input(type='hidden' name='color' id='card-color')
-        input(type='hidden' name='argument-index' id='argument-index')
-        input(type='hidden' name='argument-string' id='argument-string')
         button.action-button.medium.act__button Abschicken
     .act__legal.act__center-col.richtext
       p
