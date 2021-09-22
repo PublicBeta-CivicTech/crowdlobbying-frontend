@@ -53,20 +53,24 @@ const _selectMessage = elm => {
   _updateForm(messageIndex, messageString, color)
   elm.classList.add(seletedClass)
 
+  if (color.charAt(0) === '#') {
+    elm.style.backgroundColor = color;
+  }
+
   const visibleTextarea = document.querySelector('.act__textarea--visible');
 
-  if(visibleTextarea) {
+  if (visibleTextarea) {
     visibleTextarea.classList.remove('act__textarea--visible');
   }
   const hiddenButton = document.querySelector('.act__custom-message--toggler-hidden');
 
-  if(hiddenButton) {
+  if (hiddenButton) {
     hiddenButton.classList.remove('act__custom-message--toggler-hidden');
   }
 
   const textarea = document.querySelector('.act__textarea textarea');
 
-  if(textarea.value !== '') {
+  if (textarea.value !== '') {
     textarea.dataset.text = textarea.value;
     textarea.value = '';
   }
@@ -77,6 +81,10 @@ const _unselectMessage = elm => {
   selectedMessageElm = null
   _updateForm()
   elm && elm.classList.remove(seletedClass)
+
+  if(elm) {
+    elm.style.backgroundColor = '';
+  }
 }
 
 // Set a random color for the card given
