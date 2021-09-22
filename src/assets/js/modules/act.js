@@ -114,6 +114,7 @@ const addCustomMessage = () => {
 
   document.querySelectorAll('.act__message').forEach(message => {
     _unselectMessage(message)
+    message.parentElement.querySelector('input').checked = false;
   });
 
   const target = toggler.closest('a').nextElementSibling;
