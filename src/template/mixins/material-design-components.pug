@@ -19,6 +19,7 @@ mixin mdcCheckbox(label)
 
 mixin mdcTextArea(label, maxlength)
   .mdc-text-field.mdc-text-field--textarea(class!=attributes.class)
+    a(href='#', class='act__close', onclick='app.act.addCustomMessage(); return false;') Schliessen X
     .mdc-text-field-character-counter
     textarea#tf-outlined.mdc-text-field__input(type='textarea', maxlength=maxlength)
     .mdc-notched-outline

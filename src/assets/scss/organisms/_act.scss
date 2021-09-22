@@ -7,11 +7,11 @@
   min-height: 130px;
   height: 130px;
   overflow-y: auto;
-  padding: 10px 15px;
+  padding: 10px 14px;
   margin-top: 10px;
   font-family: $font-slab;
   // NOTE: font-size is not fluid
-  font-size: $font-size--slab-s;
+  font-size: 18px;
   line-height: $line-height--slab-s;
   background-color: $clr-white;
   color: $clr-red-dark;
@@ -50,6 +50,49 @@
 
 .act__textarea {
   min-height: 130px;
+  background: #2A9AD6 !important;
+  border-radius: 0;
+  box-shadow: 0 2px 4px 0 rgba($clr-black, 0.25);
+
+  .mdc-text-field__input,
+  .mdc-floating-label,
+  .mdc-text-field-character-counter {
+    color: $clr-white !important;
+  }
+
+  .mdc-text-field__input,
+  .mdc-floating-label {
+    font-family: $font-slab !important;
+  }
+
+  .mdc-notched-outline__leading,
+  .mdc-notched-outline__trailing,
+  .mdc-notched-outline__notch {
+    border-color: transparent !important;
+  }
+
+  .mdc-floating-label {
+    top: 35px;
+  }
+
+  .mdc-text-field__input {
+    margin-top: 35px;
+    caret-color: $clr-white;
+  }
+}
+
+.act__close {
+  color: $clr-white;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  font-size: 14px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $clr-white;
+  }
 }
 
 .act__checkbox {
@@ -75,6 +118,34 @@
   &--toggler {
     display: block;
     margin-bottom: 10px;
+    overflow-y: auto;
+    padding: 10px 15px;
+    font-family: $font-slab;
+    // NOTE: font-size is not fluid
+    font-size: 18px;
+    line-height: $line-height--slab-s;
+    background-color: $clr-white;
+    color: $clr-red-dark;
+    hyphens: auto;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba($clr-black, 0.25);
+    transition: background-color $trans-duration $trans-cubic,
+    color $trans-duration $trans-cubic;
+    text-align: left;
+
+    &.selected,
+    &.selected:hover {
+      color: $clr-white;
+    }
+
+    &:hover {
+      color: shade($clr-red-dark, 15);
+      background-color: shade($clr-grey-lighter, 5);
+    }
+
+    &-hidden {
+      display: none;
+    }
   }
 
   .act__textarea {
