@@ -7,8 +7,9 @@ section.act
     form(action='/act-confirm.html').act__form
       .act__select-message
         each message, index in messages
-          input(type='radio' name='argument' id='argument-'+index value=index style='visibility: hidden;')
-          blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
+          label(for='argument-'+index)
+            input(type='radio' name='argument' id='argument-'+index value=index style='visibility: hidden;')
+            blockquote.act__message(data-index=index onclick='app.act.selectMessage()') #{message}
       .act__custom-message.act__center-col
         a(href='#', class='act__custom-message--toggler', onclick='app.act.addCustomMessage(); return false;') ✍️ Eigene Nachricht...
         +mdcTextArea('Meine Nachricht...', 100)(class='act__input act__textarea')
