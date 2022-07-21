@@ -1,6 +1,11 @@
 .campaign-info {
   background-color: $clr-grey-dark;
   padding-bottom: $vertical-space;
+
+  &--archived {
+    background-color: #79909b;
+    padding-top: 24px;
+  }
 }
 
 .campaign-info__content {
