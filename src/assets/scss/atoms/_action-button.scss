@@ -76,6 +76,14 @@ $social: ('email', 'facebook', 'twitter', 'whatsapp');
   &.icon--up {
     background-image: url('/assets/action-button/up--red-dark.svg');
   }
+
+  &--disabled {
+    background-color: #79909b;
+
+    &:hover {
+      background-color: #79909b;
+    }
+  }
 }
 
 // Overlays, used for visual feedback ("Success!")

@@ -1,6 +1,21 @@
 .campaign-info {
   background-color: $clr-grey-dark;
   padding-bottom: $vertical-space;
+
+  &--archived {
+    background-color: #d20000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0;
+
+    & + .header {
+      top: 65px;
+    }
+  }
 }
 
 .campaign-info__content {
