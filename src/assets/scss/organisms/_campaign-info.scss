@@ -3,8 +3,18 @@
   padding-bottom: $vertical-space;
 
   &--archived {
-    background-color: #79909b;
-    padding-top: 24px;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0;
+
+    & + .header {
+      top: 65px;
+    }
   }
 }
 
